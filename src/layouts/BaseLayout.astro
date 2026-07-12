@@ -1,0 +1,56 @@
+---
+import Header from "../components/Header.astro";
+
+const {
+	title = "Komitet Społeczny Rodziców Pacjentów GCZD",
+	description = "Informacje, dokumenty i stanowiska rodziców pacjentów GCZD."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</head>
+
+<body>
+
+	<Header />
+
+	<main>
+		<slot />
+	</main>
+
+	<footer>
+		<p>
+			Komitet Społeczny Rodziców Pacjentów GCZD
+		</p>
+	</footer>
+
+</body>
+</html>
+
+<style>
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #1f2937;
+		background: #ffffff;
+	}
+
+	main {
+		max-width: 1100px;
+		margin: auto;
+		padding: 40px 20px;
+	}
+
+	footer {
+		margin-top: 80px;
+		padding: 30px;
+		border-top: 1px solid #ddd;
+		text-align: center;
+	}
+</style>
