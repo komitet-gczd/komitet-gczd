@@ -1,18 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Pillars from "../components/Pillars.astro";
+import HomeResources from "../components/HomeResources.astro";
+import HomeTimeline from "../components/HomeTimeline.astro";
 ---
 
-<BaseLayout>
-
-	<section>
-		<h2>Bezpieczna i kompleksowa opieka onkologiczna dzieci</h2>
-
-		<p>
-			Komitet Społeczny Rodziców Pacjentów GCZD
-			działa na rzecz zapewnienia dzieciom dostępu
-			do pełnej i bezpiecznej opieki onkologicznej
-			i hematologicznej.
-		</p>
-	</section>
-
+<BaseLayout
+	title="Komitet Rodziców i Pacjentów GCZD"
+	description="Komitet Rodziców i Pacjentów GCZD na rzecz Bezpiecznej Onkologii Dziecięcej."
+>
+	<Hero />
+	<Pillars />
+	<HomeResources />
+	<HomeTimeline />
 </BaseLayout>

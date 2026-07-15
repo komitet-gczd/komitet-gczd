@@ -1,0 +1,161 @@
+<section class="hero">
+	<div class="hero-background"></div>
+
+	<div class="container hero-inner">
+		<div class="hero-content">
+			<p class="eyebrow">Głos rodziców i pacjentów</p>
+
+			<h1>
+				Wspólnie walczymy o bezpieczną i kompleksową
+				<span>onkologię dziecięcą.</span>
+			</h1>
+
+			<p class="hero-description">
+				Działamy na rzecz przywrócenia dzieciom na Śląsku dostępu
+				do kompleksowej opieki onkologicznej i hematologicznej,
+				opartej na doświadczeniu, bezpieczeństwie i współpracy specjalistów.
+			</p>
+
+			<div class="hero-actions">
+				<a class="button button-primary" href="/o-nas">
+					Poznaj naszą inicjatywę
+				</a>
+
+				<a class="button button-secondary" href="/dokumenty">
+					Zobacz dokumenty
+				</a>
+			</div>
+		</div>
+
+		<div class="hero-image">
+			<div class="image-glow"></div>
+
+			<img
+				src="/images/banner.png"
+				alt="Baner Komitetu Rodziców i Pacjentów GCZD"
+			/>
+		</div>
+	</div>
+
+	<div class="hero-wave"></div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 15% 20%, rgba(7, 157, 167, 0.12), transparent 31%),
+			linear-gradient(135deg, #ffffff 20%, #f2f9fc 100%);
+	}
+
+	.hero-background {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15));
+		pointer-events: none;
+	}
+
+	.hero-inner {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 0.95fr 1.05fr;
+		align-items: center;
+		min-height: 580px;
+		gap: 50px;
+		padding-top: 70px;
+		padding-bottom: 90px;
+	}
+
+	.hero-content {
+		max-width: 640px;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: clamp(2.55rem, 5vw, 4.65rem);
+		line-height: 1.06;
+		letter-spacing: -0.045em;
+		color: var(--navy);
+	}
+
+	h1 span {
+		color: var(--teal-dark);
+	}
+
+	.hero-description {
+		max-width: 660px;
+		margin: 25px 0 0;
+		font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+		color: var(--muted);
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		margin-top: 36px;
+	}
+
+	.hero-image {
+		position: relative;
+		min-height: 420px;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-image img {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		border-radius: 30px;
+		box-shadow: 0 28px 80px rgba(2, 43, 98, 0.18);
+	}
+
+	.image-glow {
+		position: absolute;
+		width: 75%;
+		aspect-ratio: 1;
+		top: 8%;
+		right: 4%;
+		border-radius: 50%;
+		background: rgba(7, 157, 167, 0.2);
+		filter: blur(70px);
+	}
+
+	.hero-wave {
+		position: absolute;
+		z-index: 3;
+		left: -5%;
+		right: -5%;
+		bottom: -42px;
+		height: 88px;
+		border-radius: 50% 50% 0 0;
+		background: var(--background);
+		border-top: 8px solid var(--teal);
+		transform: rotate(-1deg);
+	}
+
+	@media (max-width: 940px) {
+		.hero-inner {
+			grid-template-columns: 1fr;
+			padding-top: 56px;
+		}
+
+		.hero-image {
+			min-height: auto;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero-inner {
+			padding-bottom: 75px;
+		}
+
+		.hero-image img {
+			border-radius: 18px;
+		}
+	}
+</style>

@@ -1,0 +1,150 @@
+<footer class="footer">
+	<div class="footer-main">
+		<div class="container footer-grid">
+			<div class="footer-message">
+				<img src="/images/logo.png" alt="" width="74" height="74" />
+
+				<div>
+					<h2>Nie czekamy na zmiany. Wspólnie je tworzymy.</h2>
+					<p>
+						Działamy na rzecz bezpieczeństwa dzieci leczonych
+						onkologicznie i hematologicznie.
+					</p>
+				</div>
+			</div>
+
+			<a class="button footer-button" href="/kontakt">
+				Skontaktuj się z nami
+			</a>
+
+			<div class="footer-contact">
+				<strong>Kontakt</strong>
+				<a href="mailto:komitetgczd@gmail.com">
+					komitetgczd@gmail.com
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		<div class="container footer-bottom-inner">
+			<p>
+				Komitet Rodziców i Pacjentów GCZD na rzecz Bezpiecznej Onkologii Dziecięcej
+			</p>
+
+			<div>
+				<a href="/polityka-prywatnosci">Polityka prywatności</a>
+				<a href="/dostepnosc">Dostępność</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		margin-top: 55px;
+		color: white;
+	}
+
+	.footer-main {
+		padding: 52px 0;
+		background:
+			radial-gradient(circle at 15% 20%, rgba(7, 157, 167, 0.45), transparent 32%),
+			linear-gradient(135deg, #075f84, var(--navy-dark));
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: 1.5fr auto 0.8fr;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.footer-message {
+		display: flex;
+		align-items: center;
+		gap: 22px;
+	}
+
+	.footer-message img {
+		width: 75px;
+		height: 75px;
+		object-fit: contain;
+		filter: brightness(0) invert(1);
+	}
+
+	.footer-message h2 {
+		margin: 0;
+		font-size: 1.45rem;
+		color: white;
+	}
+
+	.footer-message p {
+		margin: 7px 0 0;
+		color: rgba(255, 255, 255, 0.76);
+	}
+
+	.footer-button {
+		border-color: rgba(255, 255, 255, 0.65);
+		color: white;
+	}
+
+	.footer-contact {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding-left: 30px;
+		border-left: 1px solid rgba(255, 255, 255, 0.28);
+	}
+
+	.footer-contact a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.footer-bottom {
+		padding: 22px 0;
+		background: #021736;
+	}
+
+	.footer-bottom-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 25px;
+	}
+
+	.footer-bottom p {
+		max-width: 650px;
+		margin: 0;
+		font-size: 0.77rem;
+		color: rgba(255, 255, 255, 0.76);
+	}
+
+	.footer-bottom-inner div {
+		display: flex;
+		gap: 24px;
+	}
+
+	.footer-bottom a {
+		font-size: 0.76rem;
+		color: rgba(255, 255, 255, 0.85);
+		text-decoration: none;
+	}
+
+	@media (max-width: 900px) {
+		.footer-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-contact {
+			padding-left: 0;
+			border-left: 0;
+		}
+
+		.footer-bottom-inner {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+</style>

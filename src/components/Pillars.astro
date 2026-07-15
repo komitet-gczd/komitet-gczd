@@ -1,0 +1,152 @@
+---
+const pillars = [
+	{
+		icon: "♥",
+		title: "Rodzina",
+		description: "Najbliżsi, którzy są z dzieckiem na każdym etapie leczenia."
+	},
+	{
+		icon: "✚",
+		title: "Personel medyczny",
+		description: "Lekarze, pielęgniarki i specjaliści, którzy leczą i wspierają."
+	},
+	{
+		icon: "⌕",
+		title: "Diagnostyka",
+		description: "Precyzyjne badania i technologie potrzebne do trafnych decyzji."
+	},
+	{
+		icon: "▤",
+		title: "Nauka",
+		description: "Wiedza i badania, które prowadzą do coraz lepszego leczenia."
+	},
+	{
+		icon: "⌂",
+		title: "Instytucje",
+		description: "System i decydenci odpowiedzialni za warunki leczenia."
+	},
+	{
+		icon: "●",
+		title: "Społeczeństwo",
+		description: "Ludzie i organizacje, którzy dają siłę, wsparcie i nadzieję."
+	}
+];
+---
+
+<section class="pillars section">
+	<div class="container">
+		<div class="pillars-grid">
+			{
+				pillars.map((pillar) => (
+					<article class="pillar">
+						<div class="icon" aria-hidden="true">{pillar.icon}</div>
+						<h2>{pillar.title}</h2>
+						<p>{pillar.description}</p>
+					</article>
+				))
+			}
+		</div>
+
+		<p class="motto">
+			Wspólnie dla zdrowia dzieci. Dla dziś i dla jutra.
+		</p>
+	</div>
+</section>
+
+<style>
+	.pillars {
+		padding-top: 36px;
+		padding-bottom: 50px;
+		background: var(--background);
+	}
+
+	.pillars-grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.pillar {
+		position: relative;
+		padding: 12px 24px;
+		text-align: center;
+	}
+
+	.pillar:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		top: 12%;
+		right: 0;
+		width: 1px;
+		height: 76%;
+		background: var(--border);
+	}
+
+	.icon {
+		display: grid;
+		place-items: center;
+		width: 68px;
+		height: 68px;
+		margin: 0 auto 18px;
+		border: 2px solid var(--blue);
+		border-radius: 50%;
+		font-size: 1.65rem;
+		font-weight: 900;
+		color: var(--navy);
+		background: white;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 0.95rem;
+		text-transform: uppercase;
+		color: var(--navy);
+	}
+
+	p {
+		margin: 10px 0 0;
+		font-size: 0.86rem;
+		line-height: 1.55;
+		color: var(--muted);
+	}
+
+	.motto {
+		margin: 44px 0 0;
+		font-weight: 800;
+		font-size: 0.82rem;
+		letter-spacing: 0.32em;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--navy);
+	}
+
+	.motto::first-letter {
+		color: var(--teal);
+	}
+
+	@media (max-width: 1000px) {
+		.pillars-grid {
+			grid-template-columns: repeat(3, 1fr);
+			row-gap: 34px;
+		}
+
+		.pillar:nth-child(3)::after,
+		.pillar:nth-child(6)::after {
+			display: none;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.pillars-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.pillar:nth-child(2n)::after {
+			display: none;
+		}
+
+		.motto {
+			letter-spacing: 0.17em;
+			line-height: 1.8;
+		}
+	}
+</style>

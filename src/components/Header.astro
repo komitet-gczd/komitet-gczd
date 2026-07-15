@@ -1,59 +1,190 @@
-<header class="header">
-	<div class="container">
+---
+const currentPath = Astro.url.pathname;
 
-		<div class="logo">
-			<a href="/">
-				Komitet Społeczny<br />
-				Rodziców Pacjentów GCZD
-			</a>
-		</div>
+const links = [
+	{ href: "/", label: "Strona główna" },
+	{ href: "/o-nas", label: "O nas" },
+	{ href: "/dokumenty", label: "Dokumenty" },
+	{ href: "/kalendarium", label: "Kalendarium" },
+	{ href: "/media", label: "Media" },
+	{ href: "/kontakt", label: "Kontakt" }
+];
+---
 
-		<nav>
-			<a href="/">Start</a>
-			<a href="/o-nas">O nas</a>
-			<a href="/dokumenty">Dokumenty</a>
-			<a href="/kalendarium">Kalendarium</a>
-			<a href="/media">Media</a>
-			<a href="/kontakt">Kontakt</a>
+<header class="site-header">
+	<div class="container header-inner">
+		<a class="brand" href="/" aria-label="Strona główna Komitetu">
+			<img
+				src="/images/logo.png"
+				alt="Logo Komitetu Rodziców i Pacjentów GCZD"
+				width="76"
+				height="76"
+			/>
+
+			<div class="brand-text">
+				<strong>Komitet</strong>
+				<span>Rodziców i Pacjentów GCZD</span>
+				<small>na rzecz Bezpiecznej Onkologii Dziecięcej</small>
+			</div>
+		</a>
+
+		<nav aria-label="Główna nawigacja">
+			{
+				links.map((link) => (
+					<a
+						href={link.href}
+						class:list={[
+							currentPath === link.href && "active"
+						]}
+					>
+						{link.label}
+					</a>
+				))
+			}
 		</nav>
-
 	</div>
 </header>
 
 <style>
-.header {
-	border-bottom: 1px solid #e5e7eb;
-	padding: 20px 0;
-}
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background: rgba(255, 255, 255, 0.96);
+		border-bottom: 1px solid rgba(219, 231, 239, 0.92);
+		backdrop-filter: blur(14px);
+	}
 
-.container {
-	max-width: 1100px;
-	margin: auto;
-	padding: 0 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 30px;
-}
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 96px;
+		gap: 30px;
+	}
 
-.logo a {
-	text-decoration: none;
-	color: #111827;
-	font-weight: 700;
-}
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		min-width: 310px;
+		text-decoration: none;
+	}
 
-nav {
-	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
-}
+	.brand img {
+		width: 72px;
+		height: 72px;
+		object-fit: contain;
+	}
 
-nav a {
-	color: #374151;
-	text-decoration: none;
-}
+	.brand-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.18;
+	}
 
-nav a:hover {
-	color: #991b1b;
-}
+	.brand-text strong {
+		font-size: 1.45rem;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		color: var(--navy);
+	}
+
+	.brand-text span {
+		margin-top: 4px;
+		font-weight: 800;
+		font-size: 0.87rem;
+		text-transform: uppercase;
+		color: var(--teal-dark);
+	}
+
+	.brand-text small {
+		margin-top: 5px;
+		max-width: 260px;
+		font-weight: 700;
+		font-size: 0.65rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--navy);
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+
+	nav a {
+		position: relative;
+		padding: 12px 0;
+		font-weight: 650;
+		font-size: 0.92rem;
+		text-decoration: none;
+		color: var(--navy);
+	}
+
+	nav a::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 4px;
+		height: 2px;
+		background: var(--teal);
+		transform: scaleX(0);
+		transform-origin: center;
+		transition: transform 0.2s ease;
+	}
+
+	nav a:hover::after,
+	nav a.active::after {
+		transform: scaleX(1);
+	}
+
+	@media (max-width: 1050px) {
+		.header-inner {
+			align-items: flex-start;
+			flex-direction: column;
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+
+		nav {
+			width: 100%;
+			overflow-x: auto;
+			padding-bottom: 4px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.brand {
+			min-width: auto;
+		}
+
+		.brand img {
+			width: 58px;
+			height: 58px;
+		}
+
+		.brand-text strong {
+			font-size: 1.1rem;
+		}
+
+		.brand-text span {
+			font-size: 0.7rem;
+		}
+
+		.brand-text small {
+			font-size: 0.56rem;
+		}
+
+		nav {
+			gap: 18px;
+		}
+
+		nav a {
+			white-space: nowrap;
+			font-size: 0.82rem;
+		}
+	}
 </style>

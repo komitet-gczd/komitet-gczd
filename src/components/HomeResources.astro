@@ -1,0 +1,243 @@
+---
+const news = [
+	{
+		date: "12.07.2026",
+		title: "Stanowisko lekarzy GCZD w sprawie bezpieczeństwa leczenia dzieci",
+		description: "Najważniejsze informacje wynikające z oficjalnego stanowiska zespołu."
+	},
+	{
+		date: "08.07.2026",
+		title: "Rozmowy z samorządowcami",
+		description: "Rodzice przedstawiają postulaty i oczekują konkretnych działań."
+	},
+	{
+		date: "01.07.2026",
+		title: "Zmiana organizacji leczenia dzieci",
+		description: "Wyjaśniamy, co zmiany oznaczają dla pacjentów i ich rodzin."
+	}
+];
+
+const documents = [
+	{
+		title: "List otwarty lekarzy GCZD",
+		type: "PDF"
+	},
+	{
+		title: "Stanowisko rodziców i pacjentów GCZD",
+		type: "PDF"
+	},
+	{
+		title: "Pisma do instytucji i odpowiedzi",
+		type: "PDF"
+	},
+	{
+		title: "Najważniejsze argumenty merytoryczne",
+		type: "DOCX"
+	}
+];
+---
+
+<section class="resources section">
+	<div class="container resources-grid">
+		<div class="card panel">
+			<div class="panel-heading">
+				<div>
+					<p class="eyebrow">Bieżące informacje</p>
+					<h2>Aktualności</h2>
+				</div>
+
+				<a href="/aktualnosci">Wszystkie</a>
+			</div>
+
+			<div class="news-list">
+				{
+					news.map((item) => (
+						<article class="news-item">
+							<div class="news-date">{item.date}</div>
+
+							<div>
+								<h3>{item.title}</h3>
+								<p>{item.description}</p>
+							</div>
+
+							<a href="/aktualnosci" aria-label={`Czytaj: ${item.title}`}>→</a>
+						</article>
+					))
+				}
+			</div>
+		</div>
+
+		<div class="card panel">
+			<div class="panel-heading">
+				<div>
+					<p class="eyebrow">Materiały źródłowe</p>
+					<h2>Ważne dokumenty</h2>
+				</div>
+
+				<a href="/dokumenty">Wszystkie</a>
+			</div>
+
+			<div class="documents-list">
+				{
+					documents.map((document) => (
+						<article class="document-item">
+							<div class="file-icon">{document.type}</div>
+
+							<div class="document-title">
+								<h3>{document.title}</h3>
+								<p>{document.type}</p>
+							</div>
+
+							<a href="/dokumenty">Zobacz</a>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.resources {
+		padding-top: 32px;
+	}
+
+	.resources-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 26px;
+	}
+
+	.panel {
+		padding: 30px;
+	}
+
+	.panel-heading {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.panel-heading h2 {
+		margin: 0;
+		font-size: 1.75rem;
+		color: var(--navy);
+	}
+
+	.panel-heading .eyebrow {
+		margin-bottom: 6px;
+	}
+
+	.panel-heading > a {
+		font-weight: 700;
+		font-size: 0.88rem;
+		color: var(--teal-dark);
+		text-decoration: none;
+	}
+
+	.news-list,
+	.documents-list {
+		display: grid;
+	}
+
+	.news-item {
+		display: grid;
+		grid-template-columns: 82px 1fr auto;
+		gap: 18px;
+		align-items: start;
+		padding: 22px 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.news-date {
+		font-size: 0.76rem;
+		font-weight: 800;
+		color: var(--teal-dark);
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.35;
+		color: var(--navy);
+	}
+
+	.news-item p,
+	.document-item p {
+		margin: 7px 0 0;
+		font-size: 0.84rem;
+		color: var(--muted);
+	}
+
+	.news-item > a {
+		font-size: 1.35rem;
+		text-decoration: none;
+		color: var(--navy);
+	}
+
+	.document-item {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		align-items: center;
+		gap: 15px;
+		margin-top: 14px;
+		padding: 15px;
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		background: white;
+	}
+
+	.file-icon {
+		display: grid;
+		place-items: center;
+		width: 47px;
+		height: 47px;
+		border-radius: 10px;
+		font-size: 0.7rem;
+		font-weight: 900;
+		color: var(--navy);
+		background: rgba(7, 157, 167, 0.11);
+	}
+
+	.document-item > a {
+		padding: 8px 14px;
+		border: 1px solid var(--teal);
+		border-radius: 8px;
+		font-size: 0.78rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: var(--navy);
+	}
+
+	@media (max-width: 900px) {
+		.resources-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 560px) {
+		.panel {
+			padding: 22px;
+		}
+
+		.news-item {
+			grid-template-columns: 1fr auto;
+		}
+
+		.news-date {
+			grid-column: 1 / -1;
+		}
+
+		.document-item {
+			grid-template-columns: auto 1fr;
+		}
+
+		.document-item > a {
+			grid-column: 1 / -1;
+			text-align: center;
+		}
+	}
+</style>
