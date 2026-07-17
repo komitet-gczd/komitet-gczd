@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">Złota gwiazda</title>
+  <desc id="desc">Ośmiopromienna złota gwiazda z delikatną poświatą.</desc>
+
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffdf4" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffe39a" stop-opacity=".95"/>
+      <stop offset="62%" stop-color="#f4bc3d" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#f4bc3d" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="starFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffef8"/>
+      <stop offset="48%" stop-color="#ffe8a8"/>
+      <stop offset="100%" stop-color="#e5a51f"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.95
+                0 0.72 0 0 0.55
+                0 0 0.18 0 0.05
+                0 0 0 0.85 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="62" fill="url(#coreGlow)"/>
+
+  <g filter="url(#softGlow)">
+    <path d="
+      M100 8
+      L108 82
+      L192 100
+      L108 108
+      L100 192
+      L92 108
+      L8 100
+      L92 92
+      Z"
+      fill="url(#starFill)"/>
+
+    <path d="
+      M100 40
+      L106 88
+      L160 100
+      L106 106
+      L100 160
+      L94 106
+      L40 100
+      L94 94
+      Z"
+      fill="#fff9df"
+      opacity=".96"/>
+  </g>
+
+  <circle cx="100" cy="100" r="7" fill="#fffef8"/>
+</svg>
