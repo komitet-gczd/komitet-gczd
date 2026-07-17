@@ -150,10 +150,10 @@
 			linear-gradient(
 				90deg,
 				#ffffff 0%,
-				rgba(255, 255, 255, 0.92) 11%,
-				rgba(255, 255, 255, 0.43) 27%,
-				rgba(255, 255, 255, 0.04) 48%,
-				rgba(255, 255, 255, 0) 68%
+				rgba(255, 255, 255, 0.82) 10%,
+		    	rgba(255, 255, 255, 0.28) 24%,
+		    	rgba(255, 255, 255, 0.06) 38%,
+		    	rgba(255, 255, 255, 0) 52%
 			),
 			url("/images/hero-sky.webp") center / cover no-repeat;
 	}
@@ -171,10 +171,11 @@
 		pointer-events: none;
 	}
 
-	.hero-boy {
-		position: absolute;
+    .hero-boy {
+	    position: absolute;
 		z-index: 2;
-		left: 20%;
+		right: -2%;
+		left: auto;
 		bottom: 10px;
 		width: auto;
 		height: min(76%, 500px);
@@ -183,25 +184,25 @@
 		pointer-events: none;
 		user-select: none;
 	}
-
 	.hero-star {
 		position: absolute;
 		z-index: 3;
-		top: 72px;
-		left: 47%;
+		top: 70px;
+		right: 13%;
+		left: auto;
 		width: 76px;
 		height: 76px;
 		pointer-events: none;
-		filter: drop-shadow(0 0 18px rgba(245, 190, 65, 0.48));
+		filter: drop-shadow(0 0 12px rgba(245, 190, 65, 0.34));
 	}
 
 	.hero-quote {
 		position: absolute;
 		z-index: 4;
 		top: 50%;
-		right: 8px;
-		width: 245px;
-		padding: 18px 0 18px 24px;
+		right: 20px;
+		width: 220px;
+		padding: 18px 0 18px 22px;
 		border-left: 1px solid rgba(255, 255, 255, 0.52);
 		color: #ffffff;
 		text-shadow: 0 2px 15px rgba(2, 28, 67, 0.62);
@@ -263,12 +264,14 @@
 		}
 
 		.hero-boy {
-			left: 14%;
+			right: -8%;
+			left: auto;
 			height: 455px;
 		}
 
 		.hero-star {
-			left: 42%;
+			right: 12%;
+			left: auto;
 		}
 
 		.hero-quote {
@@ -312,7 +315,7 @@
 
 		.hero-boy {
 			left: auto;
-			right: 12%;
+			right: 3%;
 			bottom: 0;
 			height: 350px;
 		}
@@ -320,7 +323,7 @@
 		.hero-star {
 			top: 26px;
 			left: auto;
-			right: 20%;
+			right: 13%;
 			width: 64px;
 			height: 64px;
 		}
@@ -360,13 +363,15 @@
 		}
 
 		.hero-boy {
-			right: -1%;
+			right: -10%;
+			left: auto;
 			height: 270px;
 		}
 
 		.hero-star {
 			top: 16px;
-			right: 14%;
+			right: 8%;
+			left: auto;
 			width: 52px;
 			height: 52px;
 		}
