@@ -55,7 +55,7 @@
 <style>
 	.hero {
 		position: relative;
-		min-height: 650px;
+		min-height: 720px;
 		overflow: hidden;
 
 		background-color: #dff5fa;
@@ -86,9 +86,9 @@
 		z-index: 2;
 		display: grid;
 		grid-template-columns: minmax(0, 60%) minmax(0, 40%);
-		min-height: 650px;
+		min-height: 720px;
 		padding-top: 60px;
-		padding-bottom: 110px;
+		padding-bottom: 0px;
 	}
 
 	.hero-copy {
@@ -132,15 +132,16 @@
 
 	.hero-visual {
 		position: relative;
-		z-index: 2;
+		z-index: 4;
 		min-width: 0;
 		overflow: hidden;
 	}
 
 	.hero-boy {
 		position: absolute;
+		z-index: 5;
 		right: -20px;
-		bottom: 16px;
+		bottom: 0;
 		width: auto;
 		height: 500px;
 		max-width: none;
@@ -162,7 +163,7 @@
 
 	.hero-wave {
 		position: absolute;
-		z-index: 7;
+		z-index: 3;
 		left: -5%;
 		right: -5%;
 		bottom: -69px;
@@ -170,6 +171,7 @@
 		border-radius: 50% 50% 0 0;
 		border-top: 5px solid var(--teal);
 		background: var(--background);
+		pointer-events: none;
 	}
 
 	@media (max-width: 1050px) {
