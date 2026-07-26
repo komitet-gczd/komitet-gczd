@@ -1,162 +1,152 @@
 ---
-const events = [
-	{
-		date: "2024",
-		title: "Pierwsze sygnały",
-		description: "Rodzice i personel zgłaszają problemy wymagające wyjaśnienia."
-	},
-	{
-		date: "2025",
-		title: "Rozmowy i działania",
-		description: "Podejmowane są kolejne próby dialogu z instytucjami."
-	},
-	{
-		date: "01.07.2026",
-		title: "Zmiana organizacji",
-		description: "Oddział rozpoczyna działalność w nowej lokalizacji."
-	},
-	{
-		date: "Lipiec 2026",
-		title: "Stanowisko lekarzy",
-		description: "Lekarze przedstawiają opinii publicznej istotne fakty."
-	},
-	{
-		date: "Działamy dalej",
-		title: "Wspólna reprezentacja",
-		description: "Rodzice organizują działania na rzecz bezpiecznego leczenia."
-	}
-];
+import { CalendarDays } from "lucide-astro";
 ---
 
-<section class="timeline-section section">
-	<div class="container card timeline-card">
-		<div class="section-heading">
-			<p class="eyebrow">Najważniejsze wydarzenia</p>
-			<h2>Kalendarium sprawy</h2>
-		</div>
+<section class="timeline">
+  <div class="container">
 
-		<div class="timeline">
-			{
-				events.map((event, index) => (
-					<article class="timeline-item">
-						<div class="timeline-marker">
-							<span>{index + 1}</span>
-						</div>
+    <div class="section-heading">
+      <p class="eyebrow">Kalendarium</p>
 
-						<strong>{event.date}</strong>
-						<h3>{event.title}</h3>
-						<p>{event.description}</p>
-					</article>
-				))
-			}
-		</div>
+      <h2>Najważniejsze wydarzenia</h2>
 
-		<div class="timeline-action">
-			<a class="button button-secondary" href="/kalendarium">
-				Zobacz pełne kalendarium
-			</a>
-		</div>
-	</div>
+      <p>
+        Chronologia wydarzeń związanych z reorganizacją onkologii dziecięcej
+        na Śląsku.
+      </p>
+    </div>
+
+    <div class="timeline-list">
+
+      <article class="timeline-item">
+        <div class="icon">
+          <CalendarDays size={18} />
+        </div>
+
+        <div class="content">
+          <span>30 czerwca 2026</span>
+          <h3>Stanowisko lekarzy GCZD</h3>
+          <p>
+            Lekarze przedstawiają swoje stanowisko przed uruchomieniem nowego
+            ośrodka.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="icon">
+          <CalendarDays size={18} />
+        </div>
+
+        <div class="content">
+          <span>1 lipca 2026</span>
+          <h3>Rozpoczęcie działalności ośrodka w Zabrzu</h3>
+          <p>
+            Nowy oddział rozpoczyna działalność.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="icon">
+          <CalendarDays size={18} />
+        </div>
+
+        <div class="content">
+          <span>lipiec 2026</span>
+          <h3>Powstanie Komitetu</h3>
+          <p>
+            Rodzice powołują Komitet na rzecz Bezpiecznej Onkologii Dziecięcej.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="icon">
+          <CalendarDays size={18} />
+        </div>
+
+        <div class="content">
+          <span>obecnie</span>
+          <h3>Trwają kolejne działania</h3>
+          <p>
+            Publikujemy dokumenty, prowadzimy petycję i uczestniczymy
+            w spotkaniach z instytucjami.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
 </section>
 
 <style>
-	.timeline-section {
-		padding-top: 24px;
-	}
+.timeline{
+  padding:110px 0;
+  background:#fff;
+}
 
-	.timeline-card {
-		padding: 34px;
-	}
+.section-heading{
+  max-width:720px;
+  margin:0 auto 60px;
+  text-align:center;
+}
 
-	.timeline {
-		position: relative;
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 28px;
-	}
+.timeline-list{
+  max-width:820px;
+  margin:0 auto;
+  position:relative;
+}
 
-	.timeline::before {
-		content: "";
-		position: absolute;
-		top: 27px;
-		left: 8%;
-		right: 8%;
-		height: 2px;
-		background: linear-gradient(90deg, var(--navy), var(--teal));
-	}
+.timeline-list::before{
+  content:"";
+  position:absolute;
+  left:24px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#d7e4ea;
+}
 
-	.timeline-item {
-		position: relative;
-		z-index: 2;
-		text-align: center;
-	}
+.timeline-item{
+  display:flex;
+  gap:28px;
+  position:relative;
+  margin-bottom:48px;
+}
 
-	.timeline-marker {
-		display: grid;
-		place-items: center;
-		width: 56px;
-		height: 56px;
-		margin: 0 auto 17px;
-		border: 2px solid var(--blue);
-		border-radius: 50%;
-		background: white;
-	}
+.icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:var(--teal);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  z-index:2;
+}
 
-	.timeline-marker span {
-		font-weight: 900;
-		color: var(--navy);
-	}
+.content{
+  padding-top:6px;
+}
 
-	.timeline-item strong {
-		display: block;
-		font-size: 0.78rem;
-		color: var(--teal-dark);
-	}
+.content span{
+  color:var(--teal-dark);
+  font-weight:600;
+  font-size:.9rem;
+}
 
-	.timeline-item h3 {
-		margin-top: 7px;
-	}
+.content h3{
+  margin:8px 0 12px;
+  color:var(--navy);
+}
 
-	.timeline-item p {
-		margin: 8px 0 0;
-		font-size: 0.82rem;
-		color: var(--muted);
-	}
-
-	.timeline-action {
-		margin-top: 36px;
-		text-align: center;
-	}
-
-	@media (max-width: 900px) {
-		.timeline {
-			grid-template-columns: 1fr;
-		}
-
-		.timeline::before {
-			top: 20px;
-			bottom: 20px;
-			left: 27px;
-			right: auto;
-			width: 2px;
-			height: auto;
-		}
-
-		.timeline-item {
-			display: grid;
-			grid-template-columns: 58px 1fr;
-			column-gap: 20px;
-			text-align: left;
-		}
-
-		.timeline-marker {
-			grid-row: 1 / 5;
-		}
-
-		.timeline-item strong,
-		.timeline-item h3,
-		.timeline-item p {
-			grid-column: 2;
-		}
-	}
+.content p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+}
 </style>

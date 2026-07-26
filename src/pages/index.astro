@@ -1,22 +1,18 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Pillars from "../components/Pillars.astro";
 import HomeResources from "../components/HomeResources.astro";
 import HomeTimeline from "../components/HomeTimeline.astro";
-#import HomeCta from "../components/HomeCta.astro";
-import HomeResources from "../components/HomeResources.astro";
+import HomeCta from "../components/HomeCta.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout
-	title="Komitet Rodziców i Pacjentów GCZD na rzecz Bezpiecznej Onkologii Dziecięcej"
-	description="Oficjalna strona Komitetu Rodziców i Pacjentów GCZD na rzecz Bezpiecznej Onkologii Dziecięcej."
->
-	<main>
-		<Hero />
-		<Pillars />
-		<HomeResources />
-		<HomeTimeline />
-#		<HomeCta />
-	</main>
-</BaseLayout>
+<Layout>
+  <Hero />
+  <Pillars />
+  <HomeResources />
+  <HomeTimeline />
+  <HomeCta />
+  <Footer />
+</Layout>
