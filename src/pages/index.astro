@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import Hero from "../components/Hero.astro";
-import WhySection from "../components/WhySection.astro";
 import Pillars from "../components/Pillars.astro";
 import HomeResources from "../components/HomeResources.astro";
 import HomeTimeline from "../components/HomeTimeline.astro";
+import HomeCta from "../components/HomeCta.astro";
+import HomeResources from "../components/HomeResources.astro";
 ---
 
 <BaseLayout
@@ -14,13 +14,9 @@ import HomeTimeline from "../components/HomeTimeline.astro";
 >
 	<main>
 		<Hero />
-
-		<WhySection />
-
 		<Pillars />
-
 		<HomeResources />
-
 		<HomeTimeline />
+		<HomeCta />
 	</main>
 </BaseLayout>

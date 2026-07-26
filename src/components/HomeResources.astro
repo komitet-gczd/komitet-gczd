@@ -1,243 +1,264 @@
 ---
-const news = [
-	{
-		date: "12.07.2026",
-		title: "Stanowisko lekarzy GCZD w sprawie bezpieczeństwa leczenia dzieci",
-		description: "Najważniejsze informacje wynikające z oficjalnego stanowiska zespołu."
-	},
-	{
-		date: "08.07.2026",
-		title: "Rozmowy z samorządowcami",
-		description: "Rodzice przedstawiają postulaty i oczekują konkretnych działań."
-	},
-	{
-		date: "01.07.2026",
-		title: "Zmiana organizacji leczenia dzieci",
-		description: "Wyjaśniamy, co zmiany oznaczają dla pacjentów i ich rodzin."
-	}
-];
-
-const documents = [
-	{
-		title: "List otwarty lekarzy GCZD",
-		type: "PDF"
-	},
-	{
-		title: "Stanowisko rodziców i pacjentów GCZD",
-		type: "PDF"
-	},
-	{
-		title: "Pisma do instytucji i odpowiedzi",
-		type: "PDF"
-	},
-	{
-		title: "Najważniejsze argumenty merytoryczne",
-		type: "DOCX"
-	}
-];
+import { ArrowRight, FileText, Download } from "lucide-astro";
 ---
 
-<section class="resources section">
-	<div class="container resources-grid">
-		<div class="card panel">
-			<div class="panel-heading">
-				<div>
-					<p class="eyebrow">Bieżące informacje</p>
-					<h2>Aktualności</h2>
-				</div>
+<section class="resources">
+  <div class="container">
+    <div class="grid">
 
-				<a href="/aktualnosci">Wszystkie</a>
-			</div>
+      <!-- AKTUALNOŚCI -->
 
-			<div class="news-list">
-				{
-					news.map((item) => (
-						<article class="news-item">
-							<div class="news-date">{item.date}</div>
+      <section>
+        <div class="section-title">
+          <p class="eyebrow">Aktualności</p>
+          <h2>Co dzieje się teraz?</h2>
+        </div>
 
-							<div>
-								<h3>{item.title}</h3>
-								<p>{item.description}</p>
-							</div>
+        <article class="featured-news">
+          <img src="/images/news-placeholder.jpg" alt="" />
 
-							<a href="/aktualnosci" aria-label={`Czytaj: ${item.title}`}>→</a>
-						</article>
-					))
-				}
-			</div>
-		</div>
+          <div class="content">
+            <span class="date">26 lipca 2026</span>
 
-		<div class="card panel">
-			<div class="panel-heading">
-				<div>
-					<p class="eyebrow">Materiały źródłowe</p>
-					<h2>Ważne dokumenty</h2>
-				</div>
+            <h3>
+              Petycja o przywrócenie leczenia dzieci z guzami litymi w GCZD
+            </h3>
 
-				<a href="/dokumenty">Wszystkie</a>
-			</div>
+            <p>
+              Rozpoczęliśmy zbiórkę podpisów pod petycją dotyczącą przywrócenia
+              leczenia dzieci z guzami mózgu i innymi guzami litymi
+              w Górnośląskim Centrum Zdrowia Dziecka.
+            </p>
 
-			<div class="documents-list">
-				{
-					documents.map((document) => (
-						<article class="document-item">
-							<div class="file-icon">{document.type}</div>
+            <a href="#">
+              Czytaj więcej
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </article>
 
-							<div class="document-title">
-								<h3>{document.title}</h3>
-								<p>{document.type}</p>
-							</div>
+        <div class="news-list">
 
-							<a href="/dokumenty">Zobacz</a>
-						</article>
-					))
-				}
-			</div>
-		</div>
-	</div>
+          <article>
+            <span>24 lipca 2026</span>
+            <a href="#">
+              Parlamentarzyści interweniują w sprawie onkologii dziecięcej
+            </a>
+          </article>
+
+          <article>
+            <span>22 lipca 2026</span>
+            <a href="#">
+              Opublikowano stanowiska lekarzy
+            </a>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- DOKUMENTY -->
+
+      <aside>
+
+        <div class="section-title">
+          <p class="eyebrow">Dokumenty</p>
+          <h2>Najważniejsze materiały</h2>
+        </div>
+
+        <div class="documents">
+
+          <article class="document">
+            <div>
+              <FileText size={22}/>
+              <div>
+                <h3>Treść petycji</h3>
+                <p>PDF</p>
+              </div>
+            </div>
+
+            <a href="#">
+              <Download size={18}/>
+            </a>
+          </article>
+
+          <article class="document">
+            <div>
+              <FileText size={22}/>
+              <div>
+                <h3>Stanowisko lekarzy (30.06)</h3>
+                <p>PDF</p>
+              </div>
+            </div>
+
+            <a href="#">
+              <Download size={18}/>
+            </a>
+          </article>
+
+          <article class="document">
+            <div>
+              <FileText size={22}/>
+              <div>
+                <h3>Stanowisko lekarzy (06.07)</h3>
+                <p>PDF</p>
+              </div>
+            </div>
+
+            <a href="#">
+              <Download size={18}/>
+            </a>
+          </article>
+
+          <article class="document">
+            <div>
+              <FileText size={22}/>
+              <div>
+                <h3>Stanowisko lekarzy (09.07)</h3>
+                <p>PDF</p>
+              </div>
+            </div>
+
+            <a href="#">
+              <Download size={18}/>
+            </a>
+          </article>
+
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
 </section>
 
 <style>
-	.resources {
-		padding-top: 32px;
-	}
+.resources{
+  padding:110px 0;
+  background:#f8fafc;
+}
 
-	.resources-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 26px;
-	}
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:64px;
+}
 
-	.panel {
-		padding: 30px;
-	}
+.section-title{
+  margin-bottom:32px;
+}
 
-	.panel-heading {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-		gap: 20px;
-		padding-bottom: 20px;
-		border-bottom: 1px solid var(--border);
-	}
+.section-title h2{
+  margin-top:8px;
+  color:var(--navy);
+}
 
-	.panel-heading h2 {
-		margin: 0;
-		font-size: 1.75rem;
-		color: var(--navy);
-	}
+.featured-news{
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(0,0,0,.06);
+}
 
-	.panel-heading .eyebrow {
-		margin-bottom: 6px;
-	}
+.featured-news img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#d9e7ef;
+}
 
-	.panel-heading > a {
-		font-weight: 700;
-		font-size: 0.88rem;
-		color: var(--teal-dark);
-		text-decoration: none;
-	}
+.featured-news .content{
+  padding:32px;
+}
 
-	.news-list,
-	.documents-list {
-		display: grid;
-	}
+.date{
+  font-size:.9rem;
+  color:var(--muted);
+}
 
-	.news-item {
-		display: grid;
-		grid-template-columns: 82px 1fr auto;
-		gap: 18px;
-		align-items: start;
-		padding: 22px 0;
-		border-bottom: 1px solid var(--border);
-	}
+.featured-news h3{
+  margin:12px 0;
+}
 
-	.news-date {
-		font-size: 0.76rem;
-		font-weight: 800;
-		color: var(--teal-dark);
-	}
+.featured-news p{
+  color:var(--muted);
+  line-height:1.7;
+}
 
-	h3 {
-		margin: 0;
-		font-size: 1rem;
-		line-height: 1.35;
-		color: var(--navy);
-	}
+.featured-news a{
+  margin-top:20px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--teal-dark);
+  font-weight:600;
+  text-decoration:none;
+}
 
-	.news-item p,
-	.document-item p {
-		margin: 7px 0 0;
-		font-size: 0.84rem;
-		color: var(--muted);
-	}
+.news-list{
+  margin-top:28px;
+}
 
-	.news-item > a {
-		font-size: 1.35rem;
-		text-decoration: none;
-		color: var(--navy);
-	}
+.news-list article{
+  padding:20px 0;
+  border-bottom:1px solid #e5e7eb;
+}
 
-	.document-item {
-		display: grid;
-		grid-template-columns: auto 1fr auto;
-		align-items: center;
-		gap: 15px;
-		margin-top: 14px;
-		padding: 15px;
-		border: 1px solid var(--border);
-		border-radius: 12px;
-		background: white;
-	}
+.news-list span{
+  display:block;
+  font-size:.85rem;
+  color:var(--muted);
+  margin-bottom:6px;
+}
 
-	.file-icon {
-		display: grid;
-		place-items: center;
-		width: 47px;
-		height: 47px;
-		border-radius: 10px;
-		font-size: 0.7rem;
-		font-weight: 900;
-		color: var(--navy);
-		background: rgba(7, 157, 167, 0.11);
-	}
+.news-list a{
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:600;
+}
 
-	.document-item > a {
-		padding: 8px 14px;
-		border: 1px solid var(--teal);
-		border-radius: 8px;
-		font-size: 0.78rem;
-		font-weight: 700;
-		text-decoration: none;
-		color: var(--navy);
-	}
+.documents{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
 
-	@media (max-width: 900px) {
-		.resources-grid {
-			grid-template-columns: 1fr;
-		}
-	}
+.document{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
 
-	@media (max-width: 560px) {
-		.panel {
-			padding: 22px;
-		}
+.document > div{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
 
-		.news-item {
-			grid-template-columns: 1fr auto;
-		}
+.document h3{
+  margin:0;
+  font-size:1rem;
+}
 
-		.news-date {
-			grid-column: 1 / -1;
-		}
+.document p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:.85rem;
+}
 
-		.document-item {
-			grid-template-columns: auto 1fr;
-		}
+.document a{
+  color:var(--teal-dark);
+}
 
-		.document-item > a {
-			grid-column: 1 / -1;
-			text-align: center;
-		}
-	}
+@media(max-width:960px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
 </style>
