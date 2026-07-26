@@ -1,18 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
-import Pillars from "../components/Pillars.astro";
 import HomeResources from "../components/HomeResources.astro";
 import HomeTimeline from "../components/HomeTimeline.astro";
+import Pillars from "../components/Pillars.astro";
 import HomeCta from "../components/HomeCta.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
+<BaseLayout>
   <Hero />
-  <Pillars />
   <HomeResources />
   <HomeTimeline />
+  <Pillars />
   <HomeCta />
-  <Footer />
-</Layout>
+</BaseLayout>
