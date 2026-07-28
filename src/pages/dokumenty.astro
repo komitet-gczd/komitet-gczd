@@ -1,0 +1,372 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { FileText, Download, ExternalLink } from "lucide-astro";
+
+const documents = [
+  {
+    title: "Pismo lekarzy z 30 czerwca 2026 r.",
+    description:
+      "Pismo lekarzy dotyczące organizacji leczenia dzieci onkologicznych oraz zmian związanych z przeniesieniem świadczeń z Górnośląskiego Centrum Zdrowia Dziecka w Katowicach.",
+    type: "PDF",
+    date: "30 czerwca 2026",
+    href: "/documents/01-pismo-lekarzy-30-06-2026.pdf"
+  },
+  {
+    title: "Interwencja parlamentarzystów z 17 lipca 2026 r.",
+    description:
+      "Dokument dotyczący interwencji posłów i senatorów w sprawie funkcjonowania dziecięcej onkologii i hematologii na Górnym Śląsku.",
+    type: "PDF",
+    date: "17 lipca 2026",
+    href: "/documents/02-interwencja-parlamentarzystow-17-07-2026.pdf"
+  },
+  {
+    title: "Oświadczenie lekarzy z 9 lipca 2026 r.",
+    description:
+      "Oświadczenie lekarzy odnoszące się do bezpieczeństwa leczenia, zaplecza specjalistycznego oraz organizacji opieki nad dziećmi.",
+    type: "PDF",
+    date: "9 lipca 2026",
+    href: "/documents/03-oswiadczenie-lekarzy-09-07-2026.pdf"
+  },
+  {
+    title: "Petycja z 25 lipca 2026 r.",
+    description:
+      "Petycja o przywrócenie w Górnośląskim Centrum Zdrowia Dziecka w Katowicach leczenia dzieci z guzami mózgu i innymi guzami litymi.",
+    type: "PDF",
+    date: "25 lipca 2026",
+    href: "/documents/04-petycja-25-07-2026.pdf"
+  }
+];
+---
+
+<BaseLayout title="Dokumenty | Bezpieczna Onkologia Dziecięca">
+  <main>
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Dokumenty</p>
+
+        <h1>Materiały dotyczące sprawy</h1>
+
+        <p class="hero-lead">
+          Publikujemy stanowiska, pisma i inne dokumenty związane z organizacją
+          leczenia dzieci onkologicznych na Górnym Śląsku.
+        </p>
+      </div>
+    </section>
+
+    <section class="documents-section">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Baza dokumentów</p>
+            <h2>Dokumenty źródłowe</h2>
+          </div>
+
+          <p>
+            Wszystkie materiały udostępniamy w jednym miejscu, aby ułatwić
+            zapoznanie się z przebiegiem sprawy i stanowiskami jej uczestników.
+          </p>
+        </div>
+
+        <div class="documents-list">
+          {
+            documents.map((document) => (
+              <article class="document-card">
+                <div class="document-icon" aria-hidden="true">
+                  <FileText size={25} />
+                </div>
+
+                <div class="document-content">
+                  <div class="document-meta">
+                    <span>{document.type}</span>
+                    <span>{document.date}</span>
+                  </div>
+
+                  <h2>{document.title}</h2>
+                  <p>{document.description}</p>
+                </div>
+
+                <div class="document-actions">
+                  <a
+                    class="open-link"
+                    href={document.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Otwórz
+                    <ExternalLink size={16} />
+                  </a>
+
+                  <a
+                    class="download-link"
+                    href={document.href}
+                    download
+                    aria-label={`Pobierz: ${document.title}`}
+                  >
+                    <Download size={18} />
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="documents-note">
+          <p>
+            Kolejne dokumenty będą publikowane wraz z rozwojem sprawy.
+          </p>
+
+          <a href="mailto:bezpiecznaonkologiadziecieca@gmail.com">
+            Zgłoś brakujący dokument
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 105px 24px 90px;
+    background:
+      radial-gradient(
+        circle at 82% 18%,
+        rgba(46, 170, 164, 0.14),
+        transparent 34%
+      ),
+      linear-gradient(135deg, #f4f9fc 0%, #ffffff 72%);
+    border-bottom: 1px solid #dfeaf0;
+  }
+
+  .hero-inner {
+    max-width: 920px;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: var(--teal-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .page-hero h1 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-lead {
+    margin: 28px 0 0;
+    max-width: 720px;
+    color: #4e6678;
+    font-size: clamp(1.05rem, 2vw, 1.28rem);
+    line-height: 1.7;
+  }
+
+  .documents-section {
+    padding: 96px 24px 110px;
+  }
+
+  .section-intro {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 50px;
+  }
+
+  .section-intro h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+
+  .section-intro > p {
+    margin: 0;
+    max-width: 650px;
+    color: #566b7a;
+    line-height: 1.75;
+  }
+
+  .documents-list {
+    border-top: 1px solid #dce7ed;
+  }
+
+  .document-card {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr) auto;
+    gap: 26px;
+    align-items: start;
+    padding: 30px 0;
+    border-bottom: 1px solid #dce7ed;
+  }
+
+  .document-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: #edf7f7;
+    color: var(--teal-dark);
+  }
+
+  .document-content {
+    max-width: 800px;
+  }
+
+  .document-meta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .document-meta span {
+    color: #708290;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .document-meta span:first-child {
+    color: var(--teal-dark);
+  }
+
+  .document-content h2 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .document-content p {
+    margin: 0;
+    color: #5b6e7c;
+    line-height: 1.7;
+  }
+
+  .document-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .document-actions a {
+    text-decoration: none;
+  }
+
+  .open-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 15px;
+    border: 1px solid #cfdde5;
+    border-radius: 9px;
+    color: var(--navy);
+    font-size: 0.88rem;
+    font-weight: 750;
+  }
+
+  .download-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: var(--navy);
+    color: #ffffff;
+  }
+
+  .open-link:hover {
+    border-color: var(--teal);
+    color: var(--teal-dark);
+  }
+
+  .download-link:hover {
+    opacity: 0.88;
+  }
+
+  .documents-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 48px;
+    padding: 26px 30px;
+    border-radius: 14px;
+    background: #f3f8fb;
+  }
+
+  .documents-note p {
+    margin: 0;
+    color: #536978;
+  }
+
+  .documents-note a {
+    flex: 0 0 auto;
+    color: var(--navy);
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  @media (max-width: 850px) {
+    .section-intro {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .document-card {
+      grid-template-columns: 54px minmax(0, 1fr);
+    }
+
+    .document-actions {
+      grid-column: 2;
+      padding-top: 4px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .page-hero {
+      padding: 64px 20px 62px;
+    }
+
+    .documents-section {
+      padding: 72px 20px 80px;
+    }
+
+    .document-card {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .document-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .document-actions {
+      grid-column: auto;
+    }
+
+    .open-link {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .documents-note {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 24px;
+    }
+  }
+</style>
