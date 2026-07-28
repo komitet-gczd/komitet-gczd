@@ -1,184 +1,191 @@
 ---
-import { Mail, Globe, Facebook } from "lucide-astro";
+import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
 ---
 
-<footer class="footer">
+<footer class="site-footer">
+  <div class="footer-container">
 
-  <div class="container">
+    <div class="footer-brand">
+      <img
+        src="/images/logo.png"
+        alt="Komitet na rzecz Bezpiecznej Onkologii Dziecięcej"
+        class="footer-logo"
+      />
 
-    <div class="footer-grid">
-
-      <div>
-
-        <img
-          src="/images/logo.svg"
-          alt="Komitet"
-          class="logo"
-        />
-
-        <p class="description">
-          Komitet na rzecz Bezpiecznej Onkologii Dziecięcej to oddolna inicjatywa
-          rodziców działających na rzecz bezpieczeństwa leczenia dzieci.
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>Kontakt</h3>
-
-        <ul>
-
-          <li>
-
-            <Mail size={18}/>
-
-            <a href="mailto:bezpiecznaonkologiadziecieca@gmail.com">
-              bezpiecznaonkologiadziecieca@gmail.com
-            </a>
-
-          </li>
-
-          <li>
-
-            <Globe size={18}/>
-
-            <a href="/">
-              bezpiecznaonkologiadziecieca.pl
-            </a>
-
-          </li>
-
-          <li>
-
-            <Facebook size={18}/>
-
-            <a href="#">
-              Facebook
-            </a>
-
-          </li>
-
-        </ul>
-
-      </div>
-
+      <p>
+        Oddolna inicjatywa rodziców i pacjentów działających na rzecz
+        bezpiecznej i kompleksowej opieki onkologicznej dzieci.
+      </p>
     </div>
 
-    <div class="bottom">
+    <div class="footer-contact">
+      <h2>Kontakt</h2>
 
-      © 2026 Komitet na rzecz Bezpiecznej Onkologii Dziecięcej
+      <a href="mailto:bezpiecznaonkologiadziecieca@gmail.com">
+        <Mail size={18} />
+        <span>bezpiecznaonkologiadziecieca@gmail.com</span>
+      </a>
 
+      <a href="/">
+        <Globe2 size={18} />
+        <span>bezpiecznaonkologiadziecieca.pl</span>
+      </a>
+
+      <a
+        href="https://www.facebook.com/share/17k3LtTLMU/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Facebook size={18} />
+        <span>Facebook</span>
+        <ArrowUpRight size={14} />
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <h2>Na skróty</h2>
+
+      <a href="/#aktualnosci">Aktualności</a>
+      <a href="/#dokumenty">Dokumenty</a>
+      <a href="/#kalendarium">Kalendarium</a>
+      <a href="/o-nas">O nas</a>
     </div>
 
   </div>
 
+  <div class="footer-bottom">
+    <p>© 2026 Komitet na rzecz Bezpiecznej Onkologii Dziecięcej</p>
+
+    <div>
+      <a href="/polityka-prywatnosci">Polityka prywatności</a>
+      <a href="mailto:bezpiecznaonkologiadziecieca@gmail.com">Kontakt</a>
+    </div>
+  </div>
 </footer>
 
 <style>
-.footer{
+  .site-footer {
+    background: #0b3768;
+    color: #ffffff;
+    padding: 64px 24px 24px;
+  }
 
-padding:80px 0 30px;
+  .footer-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.7fr;
+    gap: 56px;
+  }
 
-background:var(--navy);
+  .footer-logo {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 22px;
+  }
 
-color:white;
+  .footer-brand p {
+    margin: 0;
+    max-width: 520px;
+    color: rgba(255,255,255,.75);
+    line-height: 1.7;
+  }
 
-}
+  .site-footer h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+  }
 
-.footer-grid{
+  .footer-contact,
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-display:grid;
+  .footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: rgba(255,255,255,.84);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
 
-grid-template-columns:2fr 1fr;
+  .footer-links a {
+    display: block;
+    margin-bottom: 12px;
+    color: rgba(255,255,255,.84);
+    text-decoration: none;
+  }
 
-gap:80px;
+  .footer-contact a:hover,
+  .footer-links a:hover,
+  .footer-bottom a:hover {
+    color: #ffffff;
+  }
 
-}
+  .footer-bottom {
+    width: min(1180px, 100%);
+    margin: 52px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.14);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+  }
 
-.logo{
+  .footer-bottom p {
+    margin: 0;
+    color: rgba(255,255,255,.58);
+    font-size: .82rem;
+  }
 
-width:220px;
+  .footer-bottom div {
+    display: flex;
+    gap: 22px;
+  }
 
-margin-bottom:24px;
+  .footer-bottom a {
+    color: rgba(255,255,255,.62);
+    font-size: .82rem;
+    text-decoration: none;
+  }
 
-}
+  @media (max-width: 900px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+    }
 
-.description{
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
 
-max-width:520px;
+  @media (max-width: 620px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
 
-opacity:.8;
+    .footer-brand {
+      grid-column: auto;
+    }
 
-line-height:1.8;
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-}
-
-.footer h3{
-
-margin-bottom:20px;
-
-}
-
-.footer ul{
-
-list-style:none;
-
-padding:0;
-
-margin:0;
-
-display:flex;
-
-flex-direction:column;
-
-gap:18px;
-
-}
-
-.footer li{
-
-display:flex;
-
-gap:12px;
-
-align-items:center;
-
-}
-
-.footer a{
-
-color:white;
-
-opacity:.85;
-
-text-decoration:none;
-
-}
-
-.bottom{
-
-margin-top:60px;
-
-padding-top:25px;
-
-border-top:1px solid rgba(255,255,255,.12);
-
-opacity:.6;
-
-font-size:.9rem;
-
-}
-
-@media(max-width:900px){
-
-.footer-grid{
-
-grid-template-columns:1fr;
-
-gap:50px;
-
-}
-
-}
+    .footer-bottom div {
+      flex-wrap: wrap;
+    }
+  }
 </style>

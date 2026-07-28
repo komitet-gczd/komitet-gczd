@@ -2,13 +2,13 @@
 import { CalendarDays } from "lucide-astro";
 ---
 
-<section class="timeline">
+<section class="timeline" id="kalendarium">
   <div class="container">
-
-    <div class="section-heading">
-      <p class="eyebrow">Kalendarium</p>
-
-      <h2>Najważniejsze wydarzenia</h2>
+    <div class="timeline-heading">
+      <div>
+        <p class="eyebrow">Kalendarium</p>
+        <h2>Najważniejsze wydarzenia</h2>
+      </div>
 
       <p>
         Chronologia wydarzeń związanych z reorganizacją onkologii dziecięcej
@@ -17,14 +17,17 @@ import { CalendarDays } from "lucide-astro";
     </div>
 
     <div class="timeline-list">
-
       <article class="timeline-item">
-        <div class="icon">
-          <CalendarDays size={18} />
+        <div class="date">
+          <span>30</span>
+          <small>czerwca</small>
+        </div>
+
+        <div class="marker">
+          <CalendarDays size={18} strokeWidth={1.9} />
         </div>
 
         <div class="content">
-          <span>30 czerwca 2026</span>
           <h3>Stanowisko lekarzy GCZD</h3>
           <p>
             Lekarze przedstawiają swoje stanowisko przed uruchomieniem nowego
@@ -34,119 +37,220 @@ import { CalendarDays } from "lucide-astro";
       </article>
 
       <article class="timeline-item">
-        <div class="icon">
-          <CalendarDays size={18} />
+        <div class="date">
+          <span>1</span>
+          <small>lipca</small>
+        </div>
+
+        <div class="marker">
+          <CalendarDays size={18} strokeWidth={1.9} />
         </div>
 
         <div class="content">
-          <span>1 lipca 2026</span>
           <h3>Rozpoczęcie działalności ośrodka w Zabrzu</h3>
           <p>
-            Nowy oddział rozpoczyna działalność.
+            Nowy oddział rozpoczyna działalność bez pełnego zespołu lekarzy,
+            który wcześniej prowadził pacjentów w Katowicach.
           </p>
         </div>
       </article>
 
       <article class="timeline-item">
-        <div class="icon">
-          <CalendarDays size={18} />
+        <div class="date">
+          <span>3</span>
+          <small>lipca</small>
+        </div>
+
+        <div class="marker">
+          <CalendarDays size={18} strokeWidth={1.9} />
         </div>
 
         <div class="content">
-          <span>lipiec 2026</span>
           <h3>Powstanie Komitetu</h3>
           <p>
-            Rodzice powołują Komitet na rzecz Bezpiecznej Onkologii Dziecięcej.
+            Rodzice i pacjenci powołują Komitet na rzecz Bezpiecznej Onkologii
+            Dziecięcej.
           </p>
         </div>
       </article>
 
       <article class="timeline-item">
-        <div class="icon">
-          <CalendarDays size={18} />
+        <div class="date">
+          <span>dziś</span>
+          <small>działamy</small>
+        </div>
+
+        <div class="marker">
+          <CalendarDays size={18} strokeWidth={1.9} />
         </div>
 
         <div class="content">
-          <span>obecnie</span>
           <h3>Trwają kolejne działania</h3>
           <p>
-            Publikujemy dokumenty, prowadzimy petycję i uczestniczymy
-            w spotkaniach z instytucjami.
+            Publikujemy dokumenty, prowadzimy petycję i kierujemy sprawę do
+            kolejnych instytucji.
           </p>
         </div>
       </article>
-
     </div>
-
   </div>
 </section>
 
 <style>
-.timeline{
-  padding:110px 0;
-  background:#fff;
-}
+  .timeline {
+    padding: 88px 0 94px;
+    background: #fff;
+  }
 
-.section-heading{
-  max-width:720px;
-  margin:0 auto 60px;
-  text-align:center;
-}
+  .timeline-heading {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 46px;
+  }
 
-.timeline-list{
-  max-width:820px;
-  margin:0 auto;
-  position:relative;
-}
+  .timeline-heading h2 {
+    margin: 8px 0 0;
+    color: var(--navy);
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
 
-.timeline-list::before{
-  content:"";
-  position:absolute;
-  left:24px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#d7e4ea;
-}
+  .timeline-heading > p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.75;
+  }
 
-.timeline-item{
-  display:flex;
-  gap:28px;
-  position:relative;
-  margin-bottom:48px;
-}
+  .timeline-list {
+    position: relative;
+    max-width: 980px;
+  }
 
-.icon{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background:var(--teal);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-  z-index:2;
-}
+  .timeline-list::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 176px;
+    width: 1px;
+    background: rgba(17, 55, 87, 0.12);
+  }
 
-.content{
-  padding-top:6px;
-}
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 130px 52px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 22px 0;
+  }
 
-.content span{
-  color:var(--teal-dark);
-  font-weight:600;
-  font-size:.9rem;
-}
+  .date {
+    padding-top: 4px;
+    text-align: right;
+  }
 
-.content h3{
-  margin:8px 0 12px;
-  color:var(--navy);
-}
+  .date span {
+    display: block;
+    color: var(--navy);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1;
+  }
 
-.content p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.7;
-}
+  .date small {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .marker {
+    position: relative;
+    z-index: 2;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--teal-dark);
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #fff;
+  }
+
+  .content {
+    padding-top: 3px;
+  }
+
+  .content h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .content p {
+    margin: 8px 0 0;
+    max-width: 680px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 760px) {
+    .timeline {
+      padding: 72px 0 78px;
+    }
+
+    .timeline-heading {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+
+    .timeline-list::before {
+      left: 25px;
+    }
+
+    .timeline-item {
+      grid-template-columns: 52px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+    }
+
+    .date {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: left;
+      padding: 0;
+    }
+
+    .date span,
+    .date small {
+      display: inline;
+    }
+
+    .date span {
+      font-size: 0.9rem;
+    }
+
+    .date small {
+      margin-left: 4px;
+      font-size: 0.7rem;
+    }
+
+    .marker {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+
+    .content {
+      grid-column: 2;
+      grid-row: 2;
+      padding-top: 0;
+    }
+  }
 </style>
