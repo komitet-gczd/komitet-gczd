@@ -6,16 +6,21 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
   <div class="footer-container">
 
     <div class="footer-brand">
-      <img
-        src="/images/logo.png"
-        alt="Komitet na rzecz Bezpiecznej Onkologii Dziecięcej"
-        class="footer-logo"
-      />
 
-      <p>
-        Oddolna inicjatywa rodziców i pacjentów działających na rzecz
-        bezpiecznej i kompleksowej opieki onkologicznej dzieci.
+      <p class="footer-label">
+        Komitet rodziców i pacjentów
       </p>
+
+      <h2>
+        Komitet na rzecz Bezpiecznej
+        Onkologii Dziecięcej
+      </h2>
+
+      <p class="footer-description">
+        Oddolna inicjatywa rodziców dzieci leczonych onkologicznie oraz pacjentów,
+        działająca na rzecz bezpiecznej i kompleksowej opieki onkologicznej dzieci.
+      </p>
+
     </div>
 
     <div class="footer-contact">
@@ -67,38 +72,47 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
   .site-footer {
     background: #0b3768;
     color: #ffffff;
-    padding: 64px 24px 24px;
+    padding: 56px 24px 22px;
   }
 
   .footer-container {
     width: min(1180px, 100%);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.6fr 1fr 0.7fr;
-    gap: 56px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr) minmax(150px, 0.45fr);
+    gap: 64px;
+    align-items: start;
   }
 
-  .footer-logo {
-    display: block;
-    width: 260px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 22px;
+  .footer-brand {
+    max-width: 500px;
   }
 
-  .footer-brand p {
-    margin: 0;
-    max-width: 520px;
-    color: rgba(255,255,255,.75);
-    line-height: 1.7;
-  }
-
-  .site-footer h2 {
-    margin: 0 0 20px;
-    color: #ffffff;
-    font-size: .82rem;
+  .footer-label {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 0.76rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .12em;
+    letter-spacing: 0.16em;
+  }
+
+  .footer-brand h2 {
+    margin: 0;
+    max-width: 460px;
+    color: #ffffff;
+    font-size: clamp(1.55rem, 2.3vw, 2.2rem);
+    line-height: 1.16;
+    letter-spacing: -0.025em;
+    text-transform: none;
+  }
+
+  .footer-description {
+    margin: 20px 0 0;
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
   .footer-contact,
@@ -108,20 +122,41 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
     align-items: flex-start;
   }
 
+  .footer-contact h2,
+  .footer-links h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
   .footer-contact a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     margin-bottom: 14px;
-    color: rgba(255,255,255,.84);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.92rem;
+    line-height: 1.5;
     text-decoration: none;
+  }
+
+  .footer-contact a span {
     overflow-wrap: anywhere;
+  }
+
+  .footer-contact svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
   }
 
   .footer-links a {
     display: block;
     margin-bottom: 12px;
-    color: rgba(255,255,255,.84);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.92rem;
     text-decoration: none;
   }
 
@@ -133,9 +168,9 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
 
   .footer-bottom {
     width: min(1180px, 100%);
-    margin: 52px auto 0;
-    padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.14);
+    margin: 44px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
     display: flex;
     justify-content: space-between;
     gap: 24px;
@@ -144,24 +179,26 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
 
   .footer-bottom p {
     margin: 0;
-    color: rgba(255,255,255,.58);
-    font-size: .82rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.78rem;
   }
 
   .footer-bottom div {
     display: flex;
     gap: 22px;
+    flex-wrap: wrap;
   }
 
   .footer-bottom a {
-    color: rgba(255,255,255,.62);
-    font-size: .82rem;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.78rem;
     text-decoration: none;
   }
 
   @media (max-width: 900px) {
     .footer-container {
       grid-template-columns: 1fr 1fr;
+      gap: 46px;
     }
 
     .footer-brand {
@@ -170,22 +207,27 @@ import { Mail, Globe2, Facebook, ArrowUpRight } from "lucide-astro";
   }
 
   @media (max-width: 620px) {
+    .site-footer {
+      padding: 46px 20px 22px;
+    }
+
     .footer-container {
       grid-template-columns: 1fr;
-      gap: 38px;
+      gap: 36px;
     }
 
     .footer-brand {
       grid-column: auto;
     }
 
+    .footer-brand h2 {
+      font-size: 1.65rem;
+    }
+
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
-    }
-
-    .footer-bottom div {
-      flex-wrap: wrap;
+      margin-top: 36px;
     }
   }
 </style>
