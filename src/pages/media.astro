@@ -1,0 +1,863 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  ArrowUpRight,
+  Facebook,
+  FileText,
+  Megaphone,
+  MessageCircle,
+  Mic,
+  Newspaper,
+  Play,
+  Radio,
+  Tv,
+  Users
+} from "lucide-astro";
+
+import {
+  publications,
+  mediaPublications,
+  publicVoices,
+  committeeMaterials,
+  featuredPublications,
+  publicationStats
+} from "../data/publications.js";
+
+const stats = [
+  {
+    value: publicationStats.media,
+    label: "Publikacji medialnych",
+    icon: Newspaper
+  },
+  {
+    value: publicationStats.public,
+    label: "Głosów publicznych i społecznych",
+    icon: Users
+  },
+  {
+    value: publicationStats.committee,
+    label: "Materiałów Komitetu",
+    icon: Megaphone
+  }
+];
+
+function getPlatformIcon(platform) {
+  const icons = {
+    Telewizja: Tv,
+    Radio: Radio,
+    Prasa: Newspaper,
+    Portal: FileText,
+    Facebook: Facebook,
+    YouTube: Play
+  };
+
+  return icons[platform] || MessageCircle;
+}
+---
+
+<BaseLayout
+  title="Publikacje i głosy poparcia"
+  description="Publikacje medialne, głosy publiczne i społeczne oraz materiały Komitetu na rzecz Bezpiecznej Onkologii Dziecięcej."
+>
+  <main>
+    <section class="page-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Media i przestrzeń publiczna</p>
+
+          <h1>Publikacje i głosy poparcia</h1>
+        </div>
+
+        <div class="hero-description">
+          <p>
+            Zbieramy materiały prasowe, reportaże, wypowiedzi osób
+            publicznych, głosy organizacji społecznych oraz publikacje
+            Komitetu.
+          </p>
+
+          <p>
+            To archiwum pokazuje, jak szerokie zainteresowanie wzbudziła
+            sprawa bezpieczeństwa dziecięcej onkologii na Śląsku.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-label="Liczba publikacji">
+      <div class="container">
+        <div class="stats-grid">
+          {
+            stats.map((stat) => {
+              const Icon = stat.icon;
+
+              return (
+                <article class="stat-card">
+                  <div class="stat-icon" aria-hidden="true">
+                    <Icon size={23} stroke-width={1.8} />
+                  </div>
+
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </article>
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+
+    <nav class="category-navigation" aria-label="Kategorie publikacji">
+      <div class="container category-list">
+        <a href="#wyroznione">Wyróżnione</a>
+        <a href="#media">Media</a>
+        <a href="#glosy-publiczne">Głosy publiczne i społeczne</a>
+        <a href="#materialy-komitetu">Materiały Komitetu</a>
+      </div>
+    </nav>
+
+    {
+      featuredPublications.length > 0 && (
+        <section
+          class="content-section featured-section"
+          id="wyroznione"
+          aria-labelledby="featured-title"
+        >
+          <div class="container">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Najważniejsze materiały</p>
+                <h2 id="featured-title">Wyróżnione publikacje</h2>
+              </div>
+
+              <p>
+                Materiały, które szczególnie dobrze przedstawiają istotę
+                sprawy i sytuację dzieci oraz ich rodzin.
+              </p>
+            </div>
+
+            <div class="featured-grid">
+              {featuredPublications.map((publication, index) => {
+                const PlatformIcon = getPlatformIcon(publication.platform);
+
+                return (
+                  <article class:list={["featured-card", index === 0 && "featured-card-large"]}>
+                    <div class="card-top">
+                      <div class="source">
+                        <span class="source-icon" aria-hidden="true">
+                          <PlatformIcon size={18} stroke-width={1.9} />
+                        </span>
+
+                        <div>
+                          <strong>{publication.source}</strong>
+                          <span>{publication.platform}</span>
+                        </div>
+                      </div>
+
+                      <span class="material-type">{publication.type}</span>
+                    </div>
+
+                    <div class="card-content">
+                      <p class="publication-date">{publication.date}</p>
+                      <h3>{publication.title}</h3>
+                      <p>{publication.description}</p>
+                    </div>
+
+                    <a
+                      href={publication.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Zobacz publikację: ${publication.title}`}
+                    >
+                      Zobacz materiał
+                      <ArrowUpRight size={17} />
+                    </a>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )
+    }
+
+    <section
+      class="content-section"
+      id="media"
+      aria-labelledby="media-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Prasa, telewizja i radio</p>
+            <h2 id="media-title">Media</h2>
+          </div>
+
+          <p>
+            Artykuły, reportaże, audycje i inne materiały przygotowane przez
+            redakcje lokalne oraz ogólnopolskie.
+          </p>
+        </div>
+
+        <div class="publications-grid">
+          {mediaPublications.map((publication) => {
+            const PlatformIcon = getPlatformIcon(publication.platform);
+
+            return (
+              <article class="publication-card">
+                <div class="card-top">
+                  <div class="source">
+                    <span class="source-icon" aria-hidden="true">
+                      <PlatformIcon size={18} stroke-width={1.9} />
+                    </span>
+
+                    <div>
+                      <strong>{publication.source}</strong>
+                      <span>{publication.platform}</span>
+                    </div>
+                  </div>
+
+                  <span class="material-type">{publication.type}</span>
+                </div>
+
+                <div class="card-content">
+                  <p class="publication-date">{publication.date}</p>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.description}</p>
+                </div>
+
+                <a
+                  href={publication.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zobacz materiał
+                  <ArrowUpRight size={17} />
+                </a>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section alternate-section"
+      id="glosy-publiczne"
+      aria-labelledby="public-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Wypowiedzi i poparcie</p>
+            <h2 id="public-title">Głosy publiczne i społeczne</h2>
+          </div>
+
+          <p>
+            Wypowiedzi ekspertów, lekarzy, organizacji, fundacji, osób
+            publicznych i twórców internetowych, którzy zabrali głos w tej
+            sprawie.
+          </p>
+        </div>
+
+        <div class="publications-grid">
+          {publicVoices.map((publication) => {
+            const PlatformIcon = getPlatformIcon(publication.platform);
+
+            return (
+              <article class="publication-card">
+                <div class="card-top">
+                  <div class="source">
+                    <span class="source-icon" aria-hidden="true">
+                      <PlatformIcon size={18} stroke-width={1.9} />
+                    </span>
+
+                    <div>
+                      <strong>{publication.source}</strong>
+                      <span>{publication.platform}</span>
+                    </div>
+                  </div>
+
+                  <span class="material-type">{publication.type}</span>
+                </div>
+
+                <div class="card-content">
+                  <p class="publication-date">{publication.date}</p>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.description}</p>
+                </div>
+
+                <a
+                  href={publication.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zobacz publikację
+                  <ArrowUpRight size={17} />
+                </a>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section"
+      id="materialy-komitetu"
+      aria-labelledby="committee-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nasza komunikacja</p>
+            <h2 id="committee-title">Materiały Komitetu</h2>
+          </div>
+
+          <p>
+            Komunikaty, nagrania, wywiady, dokumenty i publikacje przygotowane
+            przez Komitet.
+          </p>
+        </div>
+
+        <div class="publications-grid">
+          {committeeMaterials.map((publication) => {
+            const PlatformIcon = getPlatformIcon(publication.platform);
+
+            return (
+              <article class="publication-card">
+                <div class="card-top">
+                  <div class="source">
+                    <span class="source-icon" aria-hidden="true">
+                      <PlatformIcon size={18} stroke-width={1.9} />
+                    </span>
+
+                    <div>
+                      <strong>{publication.source}</strong>
+                      <span>{publication.platform}</span>
+                    </div>
+                  </div>
+
+                  <span class="material-type">{publication.type}</span>
+                </div>
+
+                <div class="card-content">
+                  <p class="publication-date">{publication.date}</p>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.description}</p>
+                </div>
+
+                <a
+                  href={publication.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zobacz materiał
+                  <ArrowUpRight size={17} />
+                </a>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="submission-section">
+      <div class="container">
+        <div class="submission-box">
+          <div>
+            <p class="eyebrow">Pomóż nam uzupełnić archiwum</p>
+            <h2>Widzisz publikację, której tutaj brakuje?</h2>
+
+            <p>
+              Prześlij nam link do artykułu, nagrania, audycji lub publicznej
+              wypowiedzi dotyczącej sprawy.
+            </p>
+          </div>
+
+          <a href="mailto:bezpiecznaonkologiadziecieca@gmail.com">
+            Wyślij materiał
+            <ArrowUpRight size={18} />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .page-hero {
+    padding: 110px 24px 76px;
+    background: #f4f8fb;
+    border-bottom: 1px solid #dfe9ef;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.7fr);
+    gap: 80px;
+    align-items: end;
+  }
+
+  .eyebrow {
+    margin: 0 0 15px;
+    color: var(--teal-dark);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .page-hero h1 {
+    margin: 0;
+    max-width: 760px;
+    color: var(--navy);
+    font-size: clamp(2.8rem, 6vw, 5.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+  }
+
+  .hero-description {
+    max-width: 530px;
+  }
+
+  .hero-description p {
+    margin: 0;
+    color: #566b79;
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+
+  .hero-description p + p {
+    margin-top: 15px;
+  }
+
+  .stats-section {
+    padding: 32px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #e1e9ee;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .stat-card {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 18px;
+    align-items: center;
+    min-height: 104px;
+    padding: 22px 25px;
+    background: #f8fbfc;
+    border: 1px solid #dfe9ee;
+    border-radius: 16px;
+  }
+
+  .stat-icon,
+  .source-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    background: #eaf6f5;
+    color: var(--teal-dark);
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .stat-card strong {
+    color: var(--navy);
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  .stat-card > span {
+    max-width: 180px;
+    color: #576d7b;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .category-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 14px 24px;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e1e9ee;
+    backdrop-filter: blur(14px);
+  }
+
+  .category-list {
+    display: flex;
+    gap: 9px;
+    min-width: max-content;
+  }
+
+  .category-list a {
+    padding: 10px 16px;
+    color: #536976;
+    font-size: 0.83rem;
+    font-weight: 750;
+    text-decoration: none;
+    background: #f4f8fa;
+    border: 1px solid #dce7ec;
+    border-radius: 999px;
+    transition:
+      color 160ms ease,
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .category-list a:hover {
+    color: var(--navy);
+    background: #edf7f7;
+    border-color: #a9d6d2;
+  }
+
+  .content-section {
+    padding: 100px 24px;
+    scroll-margin-top: 90px;
+  }
+
+  .alternate-section,
+  .featured-section {
+    background: #f4f8fb;
+    border-top: 1px solid #e0e9ee;
+    border-bottom: 1px solid #e0e9ee;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.65fr);
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 44px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(2.15rem, 4vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+  }
+
+  .section-heading > p {
+    margin: 0;
+    color: #596e7c;
+    line-height: 1.72;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 22px;
+  }
+
+  .featured-card,
+  .publication-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 27px;
+    background: #ffffff;
+    border: 1px solid #dce6ec;
+    border-radius: 18px;
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .featured-card:hover,
+  .publication-card:hover {
+    transform: translateY(-3px);
+    border-color: #b7d5d3;
+    box-shadow: 0 18px 45px rgba(24, 53, 67, 0.07);
+  }
+
+  .featured-card-large {
+    grid-row: span 2;
+    min-height: 500px;
+    padding: 34px;
+  }
+
+  .featured-card-large h3 {
+    max-width: 650px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+  }
+
+  .card-top {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+
+  .source {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .source-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .source div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .source strong {
+    overflow: hidden;
+    color: var(--navy);
+    font-size: 0.92rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .source div span {
+    margin-top: 2px;
+    color: #71828c;
+    font-size: 0.73rem;
+  }
+
+  .material-type {
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    color: var(--teal-dark);
+    font-size: 0.65rem;
+    font-weight: 850;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background: #edf7f6;
+    border-radius: 999px;
+  }
+
+  .card-content {
+    flex: 1;
+  }
+
+  .publication-date {
+    margin: 0 0 11px !important;
+    color: #778992 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700;
+  }
+
+  .card-content h3 {
+    margin: 0 0 15px;
+    color: var(--navy);
+    font-size: 1.3rem;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+
+  .card-content > p:not(.publication-date) {
+    margin: 0;
+    color: #607481;
+    font-size: 0.9rem;
+    line-height: 1.68;
+  }
+
+  .featured-card > a,
+  .publication-card > a {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 28px;
+    color: var(--navy);
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .featured-card > a:hover,
+  .publication-card > a:hover {
+    color: var(--teal-dark);
+  }
+
+  .publications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .publication-card {
+    min-height: 400px;
+  }
+
+  .submission-section {
+    padding: 80px 24px 110px;
+  }
+
+  .submission-box {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px;
+    background: var(--navy);
+    border-radius: 22px;
+  }
+
+  .submission-box h2 {
+    margin: 0 0 15px;
+    max-width: 700px;
+    color: #ffffff;
+    font-size: clamp(1.9rem, 3.6vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .submission-box p:not(.eyebrow) {
+    margin: 0;
+    max-width: 690px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+  }
+
+  .submission-box .eyebrow {
+    color: #7ed5cf;
+  }
+
+  .submission-box > a {
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 9px;
+    align-items: center;
+    padding: 14px 20px;
+    color: var(--navy);
+    font-size: 0.87rem;
+    font-weight: 800;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 1000px) {
+    .hero-grid,
+    .section-heading {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .stats-grid,
+    .publications-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-card:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .featured-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .featured-card-large {
+      grid-column: 1 / -1;
+      grid-row: auto;
+      min-height: 420px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .page-hero {
+      padding: 82px 20px 62px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.7rem, 13vw, 4rem);
+    }
+
+    .stats-section,
+    .content-section,
+    .submission-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .stats-grid,
+    .featured-grid,
+    .publications-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-card:last-child {
+      grid-column: auto;
+    }
+
+    .stat-card {
+      grid-template-columns: auto auto 1fr;
+    }
+
+    .content-section {
+      padding-top: 76px;
+      padding-bottom: 76px;
+    }
+
+    .featured-card,
+    .featured-card-large,
+    .publication-card {
+      min-height: auto;
+      padding: 25px;
+    }
+
+    .featured-card-large h3 {
+      font-size: 1.55rem;
+    }
+
+    .card-top {
+      margin-bottom: 34px;
+    }
+
+    .submission-section {
+      padding-top: 64px;
+      padding-bottom: 80px;
+    }
+
+    .submission-box {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 31px 26px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .stat-card {
+      grid-template-columns: auto 1fr;
+      gap: 13px;
+    }
+
+    .stat-card > span {
+      grid-column: 1 / -1;
+      max-width: none;
+    }
+
+    .card-top {
+      flex-direction: column;
+    }
+  }
+</style>
