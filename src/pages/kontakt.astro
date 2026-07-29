@@ -1,0 +1,440 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const email = "bezpiecznaonkologiadziecieca@gmail.com";
+const facebookUrl =
+  "https://www.facebook.com/bezpiecznaonkologiadziecieca";
+---
+
+<BaseLayout
+  title="Kontakt | Komitet na rzecz Bezpiecznej Onkologii Dziecięcej"
+  description="Skontaktuj się z Komitetem na rzecz Bezpiecznej Onkologii Dziecięcej."
+>
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <span class="eyebrow">Kontakt</span>
+
+        <h1>Porozmawiajmy</h1>
+
+        <p class="lead">
+          Masz pytanie, chcesz przekazać informacje, zaoferować pomoc
+          albo wesprzeć nasze działania? Napisz do nas.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-layout">
+        <div class="contact-intro">
+          <h2>Jesteśmy do dyspozycji</h2>
+
+          <p>
+            Komitet na rzecz Bezpiecznej Onkologii Dziecięcej jest oddolną,
+            społeczną inicjatywą rodziców i pacjentów związanych
+            z Górnośląskim Centrum Zdrowia Dziecka w Katowicach.
+          </p>
+
+          <p>
+            Odpowiadamy na wiadomości rodziców, pacjentów, lekarzy,
+            przedstawicieli mediów, organizacji społecznych
+            i instytucji publicznych.
+          </p>
+
+          <div class="notice">
+            <strong>Ważne</strong>
+
+            <p>
+              Nie udzielamy porad medycznych. W sprawach dotyczących zdrowia
+              lub leczenia należy kontaktować się bezpośrednio
+              z lekarzem albo właściwą placówką medyczną.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-cards">
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+            </div>
+
+            <div class="contact-content">
+              <span class="contact-label">E-mail</span>
+
+              <h3>Napisz do nas</h3>
+
+              <a class="contact-link" href={`mailto:${email}`}>
+                {email}
+              </a>
+
+              <p>
+                Najlepszy sposób kontaktu w sprawach organizacyjnych,
+                medialnych i dotyczących działalności Komitetu.
+              </p>
+
+              <a class="contact-button" href={`mailto:${email}`}>
+                Wyślij wiadomość
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="currentColor"
+              >
+                <path
+                  d="M13.5 22v-8h2.8l.42-3.2H13.5V8.75c0-.93.26-1.56 1.62-1.56h1.73V4.33c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.26H7.27V14h2.83v8h3.4Z"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="contact-content">
+              <span class="contact-label">Facebook</span>
+
+              <h3>Obserwuj nasze działania</h3>
+
+              <a
+                class="contact-link"
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                /bezpiecznaonkologiadziecieca
+              </a>
+
+              <p>
+                Publikujemy tam aktualności, dokumenty, materiały medialne
+                oraz informacje o kolejnych działaniach.
+              </p>
+
+              <a
+                class="contact-button"
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Przejdź na Facebook
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-contact">
+      <div class="container">
+        <div class="media-box">
+          <div>
+            <span class="eyebrow">Dla mediów</span>
+
+            <h2>Kontakt prasowy</h2>
+
+            <p>
+              Dziennikarzy prosimy o przesłanie wiadomości z nazwą redakcji,
+              tematem materiału i preferowanym terminem kontaktu.
+            </p>
+          </div>
+
+          <a
+            class="primary-button"
+            href={`mailto:${email}?subject=Kontakt prasowy`}
+          >
+            Kontakt dla mediów
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .contact-hero {
+    padding: clamp(5rem, 10vw, 8rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+    background:
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(246, 199, 68, 0.2),
+        transparent 24rem
+      ),
+      linear-gradient(145deg, #102d4f 0%, #184f79 100%);
+    color: #ffffff;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #f6c744;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  h1 {
+    max-width: 760px;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+  }
+
+  .lead {
+    max-width: 720px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: clamp(1.08rem, 2vw, 1.35rem);
+    line-height: 1.65;
+  }
+
+  .contact-section {
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    background: #f6f8fb;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .contact-intro {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .contact-intro h2,
+  .media-box h2 {
+    margin-bottom: 1.25rem;
+    color: #173b61;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .contact-intro > p {
+    color: #536579;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .notice {
+    margin-top: 2rem;
+    padding: 1.35rem 1.4rem;
+    border-left: 4px solid #f6c744;
+    border-radius: 0 14px 14px 0;
+    background: #ffffff;
+    box-shadow: 0 14px 40px rgba(20, 54, 86, 0.07);
+  }
+
+  .notice strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #173b61;
+  }
+
+  .notice p {
+    margin-bottom: 0;
+    color: #5d6b79;
+    line-height: 1.6;
+  }
+
+  .contact-cards {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .contact-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.3rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border: 1px solid rgba(23, 59, 97, 0.09);
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 18px 55px rgba(20, 54, 86, 0.08);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 70px rgba(20, 54, 86, 0.13);
+  }
+
+  .contact-icon {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    border-radius: 17px;
+    background: #eaf3fa;
+    color: #174e78;
+  }
+
+  .contact-label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #778697;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .contact-content h3 {
+    margin-bottom: 0.7rem;
+    color: #173b61;
+    font-size: 1.5rem;
+  }
+
+  .contact-link {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    color: #17618f;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .contact-content p {
+    margin-bottom: 1.4rem;
+    color: #617184;
+    line-height: 1.65;
+  }
+
+  .contact-button,
+  .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+      transform 160ms ease,
+      background 160ms ease;
+  }
+
+  .contact-button {
+    padding: 0.8rem 1.1rem;
+    background: #edf5fa;
+    color: #174e78;
+  }
+
+  .contact-button:hover,
+  .primary-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .media-contact {
+    padding: 0 0 clamp(4rem, 8vw, 7rem);
+    background: #f6f8fb;
+  }
+
+  .media-box {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border-radius: 28px;
+    background: #173b61;
+    color: #ffffff;
+  }
+
+  .media-box h2 {
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+  }
+
+  .media-box p {
+    max-width: 680px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.7;
+  }
+
+  .primary-button {
+    flex-shrink: 0;
+    padding: 1rem 1.35rem;
+    background: #f6c744;
+    color: #173b61;
+  }
+
+  .primary-button:hover {
+    background: #ffd45e;
+  }
+
+  @media (max-width: 860px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-intro {
+      position: static;
+    }
+
+    .media-box {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .contact-card {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .primary-button {
+      width: 100%;
+    }
+  }
+</style>
