@@ -1,40 +1,48 @@
-name: Aktualizacja publikacji
+name: Monitoring onkologii dziecięcej
 
 on:
   workflow_dispatch:
 
   schedule:
-    - cron: "17 5,17 * * *"
+    - cron: "23 */6 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: monitoring-onkologii
+  cancel-in-progress: false
+
 jobs:
-  update-news:
+  monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
 
-      - name: Skonfiguruj Node.js
+      - name: Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Zainstaluj zależności
+      - name: Instalacja zależności
         run: npm ci
 
-      - name: Pobierz nowe publikacje
+      - name: Instalacja Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Uruchom monitoring
         run: node scripts/update-news.mjs
 
-      - name: Sprawdź stronę
+      - name: Budowanie Astro
         run: npm run build
 
-      - name: Zapisz zmiany
+      - name: Commit zmian
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- src/data/auto-publications.json; then
             echo "Brak nowych publikacji."
             exit 0
           fi
@@ -44,4 +52,5 @@ jobs:
 
           git add src/data/auto-publications.json
           git commit -m "Automatyczna aktualizacja publikacji"
+
           git push

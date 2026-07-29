@@ -218,7 +218,18 @@ function getPlatformIcon(platform) {
 
                   <span class="material-type">{publication.type}</span>
                 </div>
-
+                {
+                publication.image && (
+                    <div class="publication-image">
+                    <img
+                        src={publication.image}
+                        alt={publication.title}
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    </div>
+                )
+                }
                 <div class="card-content">
                   <p class="publication-date">{publication.date}</p>
                   <h3>{publication.title}</h3>
@@ -858,6 +869,25 @@ function getPlatformIcon(platform) {
 
     .card-top {
       flex-direction: column;
+    }
+    
+    .publication-image {
+    margin: -27px -27px 22px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px 18px 0 0;
+    }
+
+    .publication-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .35s ease;
+    }
+
+    .publication-card:hover .publication-image img {
+    transform: scale(1.04);
     }
   }
 </style>
