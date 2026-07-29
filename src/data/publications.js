@@ -1,4 +1,6 @@
-export const publications = [
+import automaticPublications from "./auto-publications.json";
+
+export const manualPublications = [
   /*
    * =========================================================
    * PUBLIKACJE MEDIALNE
@@ -494,6 +496,39 @@ export const publications = [
     description: "Publikacja przedstawiająca powody powstania inicjatywy, cele Komitetu oraz najważniejsze postulaty rodziców.",
     href: "https://www.facebook.com/people/Komitet-na-rzecz-Bezpiecznej-Onkologii-Dzieci%C4%99cej/61591853882882/"
   },
+];
+
+const normalizeHref = (href) => {
+  try {
+    const url = new URL(href);
+    url.hash = "";
+    return url.toString();
+  } catch {
+    return href;
+  }
+};
+
+const publicationsByHref = new Map();
+
+for (const publication of [
+  ...manualPublications,
+  ...automaticPublications
+]) {
+  const key = normalizeHref(publication.href);
+
+  /*
+   * Wpis ręczny ma pierwszeństwo przed automatycznym.
+   */
+  if (
+    !publicationsByHref.has(key) ||
+    publication.automatic !== true
+  ) {
+    publicationsByHref.set(key, publication);
+  }
+}
+
+export const publications = [
+  ...publicationsByHref.values()
 ];
 
 /*
