@@ -90,10 +90,34 @@ function isRelevant(item) {
       .join(" ")
   );
 
-  return (
-    containsAny(text, subjectKeywords) &&
-    containsAny(text, contextKeywords)
+function isRelevant(item) {
+  const text = normalizeText(
+    [
+      item.title,
+      item.contentSnippet,
+      item.content,
+      item.categories?.join(" ")
+    ]
+      .filter(Boolean)
+      .join(" ")
   );
+
+  return containsAny(text, [
+    "gczd",
+    "górnośląskie centrum zdrowia dziecka",
+    "onkologia dziecięca",
+    "hematologia dziecięca",
+    "centrum onkologii i hematologii dziecięcej",
+    "mizia-malarz",
+    "mizia malarz",
+    "bezpieczna onkologia dziecięca",
+    "guzy mózgu",
+    "guzy lite",
+    "dziecięcej onkologii",
+    "onkologii dziecięcej",
+    "onkologiczne dzieci",
+    "oddział onkologii dziecięcej"
+  ]);
 }
 
 function normalizeUrl(value) {
@@ -158,7 +182,12 @@ async function loadExistingPublications() {
 async function fetchFeed(feed) {
   try {
     const result = await parser.parseURL(feed.url);
+    console.log(`\nKanał: ${feed.name}`);
+    console.log(`Pobrano wpisów: ${result.items.length}`);
 
+    result.items.slice(0, 10).forEach((item) => {
+    console.log(`- ${item.title}`);
+    });
     return result.items
       .filter((item) => item.link && item.title)
       .filter(isRelevant)
