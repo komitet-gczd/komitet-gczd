@@ -1,60 +1,12 @@
 [
   {
-    "id": "auto-5cdfb355626832fe",
-    "category": "media",
-    "featured": false,
-    "automatic": true,
-    "date": "29 lipca 2026",
-    "dateISO": "2026-07-29",
-    "source": "TVS.plWięcej",
-    "platform": "Portal",
-    "type": "Artykuł",
-    "title": "Chorzów: Oddział Hematologii i Onkologii Dziecięcej do zamknięcia? WIDEO",
-    "description": "Telewizja TVS to źródło różnorodnych treści dla każdego. Sprawdź, co mamy do zaoferowania!",
-    "href": "https://tvs.pl/",
-    "image": null,
-    "relevanceScore": 7
-  },
-  {
-    "id": "auto-eb79c8ee259b1f80",
-    "category": "media",
-    "featured": false,
-    "automatic": true,
-    "date": "29 lipca 2026",
-    "dateISO": "2026-07-29",
-    "source": "Dziennik ZachodniWięcej",
-    "platform": "Portal",
-    "type": "Artykuł",
-    "title": "Dramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni",
-    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
-    "href": "https://dziennikzachodni.pl/",
-    "image": "https://s-nsk.ppstatic.pl/assets/nsk/v1.397.1/images/_sites/logo/png/og_image/dziennikzachodni.png",
-    "relevanceScore": 7
-  },
-  {
-    "id": "auto-bf37e762c406649d",
-    "category": "media",
-    "featured": false,
-    "automatic": true,
-    "date": "27 lipca 2026",
-    "dateISO": "2026-07-27",
-    "source": "RMF24WięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
-    "platform": "Portal",
-    "type": "Artykuł",
-    "title": "Petycja ws. przywrócenia onkologii dziecięcej w Katowicach",
-    "description": "Najnowsze informacje z kraju i ze świata, najważniejsze wiadomości gospodarcze, sportowe i naukowe. Relacje na żywo. Podcasty Fakty RMF FM oraz Rozmowy naszych dziennikarzy...",
-    "href": "https://www.rmf24.pl/",
-    "image": null,
-    "relevanceScore": 7
-  },
-  {
     "id": "auto-7726489bed94e2ae",
     "category": "media",
     "featured": false,
     "automatic": true,
     "date": "27 lipca 2026",
     "dateISO": "2026-07-27",
-    "source": "RMF24WięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
+    "source": "rmf24.plWięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Petycja ws. przywrócenia onkologii dziecięcej w Katowicach",
@@ -96,22 +48,6 @@
     "relevanceScore": 5
   },
   {
-    "id": "auto-428f6bde65ca5416",
-    "category": "media",
-    "featured": false,
-    "automatic": true,
-    "date": "22 lipca 2026",
-    "dateISO": "2026-07-22",
-    "source": "Puls MedycynyWięcej",
-    "platform": "Portal",
-    "type": "Artykuł",
-    "title": "Kryzys w śląskiej onkologii dziecięcej. Dr hab. Mizia-Malarz: mogę leczyć od jutra, ale w GCZD",
-    "description": "Największy portal lekarski w Polsce. Wszystkie informacje potrzebne lekarzowi w jednym miejscu",
-    "href": "https://a.konsylium24.pl/kompendium24",
-    "image": null,
-    "relevanceScore": 8
-  },
-  {
     "id": "auto-9d8f36aebfa0c333",
     "category": "media",
     "featured": false,
@@ -128,7 +64,7 @@
     "relevanceScore": 8
   },
   {
-    "id": "auto-12de7c758731d4e6",
+    "id": "auto-e1935e399326b94a",
     "category": "media",
     "featured": false,
     "automatic": true,
@@ -138,9 +74,9 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Apel ws. Oddziału Onkologii i Hematologii dziecięcej w GCZD. Wpłynęło zawiadomienie do prokuratury",
-    "description": "e-wydanie Dziennika Gazety Prawnej to tylko sprawdzone informacje! Pełne archiwum wydań od 2002 r. Wersja: PDF, mobi, epub oraz możliwość czytania w aplikacji i przez przeglądarkę. KUP prenumeratę lub pojedyncze wydanie.",
-    "href": "https://edgp.gazetaprawna.pl/",
-    "image": null,
+    "description": "To był prawdziwy cios dla małych pacjentów chorych na raka i ich rodziców. Niestety, mimo protestów i licznych apeli, decyzje zapadły i oddział onkologii i hematologii dziecięcej Górnośląskiego Centrum Zdrowia Dziecka przestał istnieć na początku lipca. Pacjenci zostali przeniesieni do Zabrza, ale rodzice mają całą listę zarzutów ws. f...",
+    "href": "https://www.gazetaprawna.pl/biznes/zdrowie/artykuly/11277627,dramat-malych-pacjentow-chorych-na-raka-zrozpaczeni-rodzice-zawiadami.html",
+    "image": "https://webp-konwerter.incdn.pl/eyJmIjoiaHR0cHM6Ly9pbmZvci13ZWItc3RhdGljLmluY2/RuLnBsL2RncHN0YXRpYy9kb2N1bWVudHMvRk9CMDAwMDAw/MDAwMDAwNzYyNTc3Ni9maWxlcy9wYXAtMjAyNDAyMjYtMG/5nLTM5MjAxOTA1LTM5MjAxOTEwLmpwZyIsInciOjM4NDB9",
     "relevanceScore": 11
   },
   {
@@ -157,6 +93,22 @@
     "description": "Chaos, braki w dokumentacji i uczący się zawodu lekarze. Lista zarzutów rodziców dzieci chorych na raka jest długa. Miała się zmniejszyć po...",
     "href": "https://katowice.tvp.pl/94395982/lista-zarzutow-rodzicow-coraz-dluzsza-sledczy-zajma-sie-przeniesionym-oddzialem-onkologii",
     "image": "https://s6.tvp.pl/images2/f/2/3/uid_f23a32e371834a4b8b883e74716d8ab7_width_900_play_0_pos_0_gs_0_height_506.jpg",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-37e1e79d53e1f7ec",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "10 lipca 2026",
+    "dateISO": "2026-07-10",
+    "source": "TVN24Więcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Lekarki chcą przywrócenia onkologii dziecięcej. \"Chodzi wyłącznie o zdrowie i życie dzieci\"",
+    "description": "Lekarki, które pracowały na zamkniętym w czerwcu oddziale Hematologii i Onkologii Dziecięcej w Katowicach, chcą przywrócenia oddziału. \"Chodzi wyłącznie o zdrowie i życie dzieci\" - piszą. Była ordynator twierdzi, że leczenie dzieci w Zabrzu mogłoby wręcz zagrażać ich zdrowiu, a nawet życiu. Zarząd Polskiego Towarzystwa Onkologii i Hema...",
+    "href": "https://tvn24.pl/katowice/katowice-zabrze-lekarki-chca-przywrocenia-onkologii-chodzi-wylacznie-o-zdrowie-i-zycie-dzieci-st9136453",
+    "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-svvxos-gornoslaskie-centrum-zdrowia-dziecka-ph6900821/alternates/WEBP_LANDSCAPE_1620",
     "relevanceScore": 7
   },
   {
@@ -192,6 +144,22 @@
     "relevanceScore": 7
   },
   {
+    "id": "auto-17d0106942e7eb86",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "6 lipca 2026",
+    "dateISO": "2026-07-06",
+    "source": "TVN24Więcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Problemy po połączeniu oddziałów onkologii dziecięcej. List szpitala do rodziców",
+    "description": "Szpital w Zabrzu poinformował, że nie jest w stanie na razie zająć wszystkimi małymi pacjentami, którzy byli leczeni dotąd na onkologii w Katowicach. W oświadczeniu wskazano, że obecnie nie ma specjalisty, który miałby odpowiednie doświadczenie. Rodzice dzieci z guzami mózgu prawdopodobnie będą jeździć do Krakowa lub do Warszawy.",
+    "href": "https://tvn24.pl/katowice/onkologia-dziecieca-w-zabrzu-nie-bedzie-leczyc-czesci-pacjentow-zostanie-wskazany-osrodek-st9130483",
+    "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-2837786-szpital-w-zabrzu-ph9130910/alternates/WEBP_LANDSCAPE_1620",
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-ed91813860a05355",
     "category": "media",
     "featured": false,
@@ -208,20 +176,20 @@
     "relevanceScore": 7
   },
   {
-    "id": "auto-de081a2200b19713",
+    "id": "auto-a45bf2dfafbb83cb",
     "category": "media",
     "featured": false,
     "automatic": true,
-    "date": "2 lipca 2026",
-    "dateISO": "2026-07-02",
-    "source": "TVP KatowiceWięcej",
+    "date": "5 lipca 2026",
+    "dateISO": "2026-07-05",
+    "source": "Rynek ZdrowiaWięcej",
     "platform": "Portal",
     "type": "Artykuł",
-    "title": "Burza wokół dziecięcej onkologii w Zabrzu. Szpital odpowiada na oskarżenia medyków",
-    "description": "Telewizja Polska S.A",
-    "href": "https://regiony.tvp.pl/",
-    "image": "https://s.tvp.pl/files/portale-v4/tvp-pl/images/tvp.jpg",
-    "relevanceScore": 5
+    "title": "Nagle wszyscy lekarze odeszli. W dzień otwarcia centrum onkologii dla dzieci",
+    "description": "1 lipca ruszyło Śląskie Centrum Onkologii i Hematologii Dziecięcej w Zabrzu. Tego samego dnia sześcioosobowy zespół lekarzy z Katowic, który miał pracować w nowym ośrodku, rozwiązał umowy, na przyczyny wskazując m.in. na zakres leczenia i organizację pracy.",
+    "href": "https://www.rynekzdrowia.pl/Serwis-Onkologia/Nagle-wszyscy-lekarze-odeszli-W-dzien-otwarcia-centrum-onkologii-dla-dzieci,286305,1013.html",
+    "image": "https://pliki.rynekzdrowia.pl/i/24/46/95/244695_r2_940.jpg",
+    "relevanceScore": 7
   },
   {
     "id": "auto-3edac18894b5987a",
@@ -238,5 +206,21 @@
     "href": "https://katowice.tvp.pl/94140408/ostre-zarzuty-i-rownie-stanowcza-riposta-konflikt-w-slaskim-centrum-onkologii-i-hematologii-dzieciecej",
     "image": "https://s3.tvp.pl/images2/c/2/5/uid_c25a274f0aa14e7e8a1187e1e0f3eb15_width_900_play_0_pos_0_gs_0_height_506.png",
     "relevanceScore": 5
+  },
+  {
+    "id": "auto-28f3de23edbb478c",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "2 lipca 2026",
+    "dateISO": "2026-07-02",
+    "source": "Dziennik ZachodniWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Dramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni",
+    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
+    "href": "https://dziennikzachodni.pl/dramatyczna-sytuacja-dzieciecej-onkologii-na-slasku-lekarze-rezygnuja-z-pracy-rodzice-sa-przerazeni-nikt-nic-nie-wie/ar/c1p2-29146631",
+    "image": "https://d-pa.ppstatic.pl/frames/pa-def/c8/68/il20260702_970951799_original.jpg",
+    "relevanceScore": 7
   }
 ]
