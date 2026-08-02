@@ -5,6 +5,21 @@ import {
   FileText,
   Newspaper
 } from "lucide-astro";
+
+import { publications } from "../data/publications.js";
+
+const PETITION_URL =
+  "https://www.petycjeonline.com/przywromy_leczenie_dzieci_z_guzami_mozgu_i_innymi_guzami_litymi_do_gornolskiego_centrum_zdrowia_dziecka_w_katowicach#form";
+
+const latestNews = publications
+  .filter((item) => item.category === "media")
+  .filter((item) => item.href && item.title && item.dateISO)
+  .sort(
+    (a, b) =>
+      new Date(b.dateISO).getTime() -
+      new Date(a.dateISO).getTime()
+  )
+  .slice(0, 3);
 ---
 
 <section class="resources" id="aktualnosci">
@@ -18,29 +33,46 @@ import {
         </div>
 
         <article class="featured-news">
-          <a href="#" class="featured-image">
+          <a
+            href={PETITION_URL}
+            class="featured-image"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="/images/news-placeholder.jpg"
-              alt="Sala leczenia dziecięcego"
+              alt="Petycja o przywrócenie leczenia dzieci w GCZD"
             />
           </a>
 
           <div class="featured-content">
-            <time datetime="2026-07-26">26 lipca 2026</time>
+            <time datetime="2026-07-25">
+              25 lipca 2026
+            </time>
 
             <h3>
-              <a href="#">
-                Petycja o przywrócenie leczenia dzieci z guzami litymi w GCZD
+              <a
+                href={PETITION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Petycja o przywrócenie leczenia dzieci z guzami mózgu i innymi guzami litymi w GCZD
               </a>
             </h3>
 
             <p>
-              Rozpoczęliśmy zbiórkę podpisów pod petycją dotyczącą przywrócenia
-              leczenia dzieci z guzami mózgu i innymi guzami litymi
-              w Górnośląskim Centrum Zdrowia Dziecka w Katowicach.
+              Podpisz petycję o przywrócenie w Górnośląskim Centrum
+              Zdrowia Dziecka w Katowicach leczenia dzieci z guzami mózgu
+              i innymi guzami litymi. Każdy podpis wzmacnia głos rodziców,
+              pacjentów i lekarzy walczących o bezpieczną onkologię dziecięcą.
             </p>
 
-            <a href="#" class="read-more">
+            <a
+              href={PETITION_URL}
+              class="read-more"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Czytaj więcej
               <ArrowRight size={18} strokeWidth={2} />
             </a>
@@ -48,51 +80,61 @@ import {
         </article>
 
         <div class="news-list">
-          <article class="news-item">
-            <div class="news-icon">
-              <Newspaper size={20} strokeWidth={1.8} />
-            </div>
+          {
+            latestNews.map((news) => (
+              <article class="news-item">
+                <div class:list={[
+                  "news-icon",
+                  news.image && "news-icon--image"
+                ]}>
+                  {
+                    news.image ? (
+                      <img
+                        src={news.image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <Newspaper
+                        size={20}
+                        strokeWidth={1.8}
+                      />
+                    )
+                  }
+                </div>
 
-            <div>
-              <time datetime="2026-07-24">24 lipca 2026</time>
-              <h3>
-                <a href="#">
-                  Parlamentarzyści interweniują w sprawie onkologii dziecięcej
-                </a>
-              </h3>
-            </div>
-          </article>
+                <div class="news-item-content">
+                  <time datetime={news.dateISO}>
+                    {news.date}
+                  </time>
 
-          <article class="news-item">
-            <div class="news-icon">
-              <Newspaper size={20} strokeWidth={1.8} />
-            </div>
+                  <h3>
+                    <a
+                      href={news.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {news.title}
+                    </a>
+                  </h3>
 
-            <div>
-              <time datetime="2026-07-22">22 lipca 2026</time>
-              <h3>
-                <a href="#">
-                  Opublikowaliśmy stanowiska lekarzy dotyczące reorganizacji
-                  leczenia
-                </a>
-              </h3>
-            </div>
-          </article>
+                  {
+                    news.source && (
+                      <p class="news-source">
+                        {news.source}
+                      </p>
+                    )
+                  }
+                </div>
+              </article>
+            ))
+          }
 
-          <article class="news-item">
-            <div class="news-icon">
-              <Newspaper size={20} strokeWidth={1.8} />
-            </div>
-
-            <div>
-              <time datetime="2026-07-20">20 lipca 2026</time>
-              <h3>
-                <a href="#">
-                  Komitet rozpoczął oficjalną działalność informacyjną
-                </a>
-              </h3>
-            </div>
-          </article>
+          <a href="/media" class="all-news">
+            Zobacz wszystkie publikacje
+            <ArrowRight size={18} strokeWidth={2} />
+          </a>
         </div>
       </div>
 
@@ -356,6 +398,44 @@ import {
     place-items: center;
     border-radius: 13px;
     background: rgba(15, 157, 166, 0.09);
+    color: var(--teal-dark);
+  }
+  .news-icon--image {
+    overflow: hidden;
+    background: #e9f1f4;
+  }
+
+  .news-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .news-item-content {
+    min-width: 0;
+  }
+
+  .news-source {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .all-news {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 10px;
+    color: var(--navy);
+    font-size: 0.93rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .all-news:hover {
     color: var(--teal-dark);
   }
 
