@@ -7,6 +7,7 @@ import {
 } from "lucide-astro";
 
 import { publications } from "../data/publications.js";
+import { homeDocuments } from "../data/documents.js";
 
 const PETITION_URL =
   "https://www.petycjeonline.com/przywromy_leczenie_dzieci_z_guzami_mozgu_i_innymi_guzami_litymi_do_gornolskiego_centrum_zdrowia_dziecka_w_katowicach#form";
@@ -145,117 +146,35 @@ const latestNews = publications
         </div>
 
         <div class="documents-list">
+          {
+            homeDocuments.map((document) => (
+              <article class="document-card">
+                <div class="document-main">
+                  <div class="document-icon">
+                    <FileText size={23} strokeWidth={1.8} />
+                  </div>
 
-          <article class="document-card">
-            <div class="document-main">
-              <div class="document-icon">
-                <FileText size={23} strokeWidth={1.8} />
-              </div>
+                  <div>
+                    <h3>{document.shortTitle || document.title}</h3>
+                    <p>
+                      {document.type} · {document.date}
+                    </p>
+                  </div>
+                </div>
 
-              <div>
-                <h3>Treść petycji</h3>
-                <p>Dokument PDF</p>
-              </div>
-            </div>
-
-            <a
-              href="/documents/petycja.pdf"
-              class="download-button"
-              aria-label="Pobierz treść petycji"
-              download
-            >
-              <Download size={19} />
-            </a>
-          </article>
-
-          <article class="document-card">
-            <div class="document-main">
-              <div class="document-icon">
-                <FileText size={23} strokeWidth={1.8} />
-              </div>
-
-              <div>
-                <h3>Stanowisko lekarzy z 30 czerwca 2026</h3>
-                <p>Dokument PDF</p>
-              </div>
-            </div>
-
-            <a
-              href="/documents/stanowisko-lekarzy-30-06-2026.pdf"
-              class="download-button"
-              aria-label="Pobierz stanowisko lekarzy z 30 czerwca"
-              download
-            >
-              <Download size={19} />
-            </a>
-          </article>
-
-          <article class="document-card">
-            <div class="document-main">
-              <div class="document-icon">
-                <FileText size={23} strokeWidth={1.8} />
-              </div>
-
-              <div>
-                <h3>Stanowisko lekarzy z 6 lipca 2026</h3>
-                <p>Dokument PDF</p>
-              </div>
-            </div>
-
-            <a
-              href="/documents/stanowisko-lekarzy-06-07-2026.pdf"
-              class="download-button"
-              aria-label="Pobierz stanowisko lekarzy z 6 lipca"
-              download
-            >
-              <Download size={19} />
-            </a>
-          </article>
-
-          <article class="document-card">
-            <div class="document-main">
-              <div class="document-icon">
-                <FileText size={23} strokeWidth={1.8} />
-              </div>
-
-              <div>
-                <h3>Stanowisko lekarzy z 9 lipca 2026</h3>
-                <p>Dokument PDF</p>
-              </div>
-            </div>
-
-            <a
-              href="/documents/stanowisko-lekarzy-09-07-2026.pdf"
-              class="download-button"
-              aria-label="Pobierz stanowisko lekarzy z 9 lipca"
-              download
-            >
-              <Download size={19} />
-            </a>
-          </article>
-
-          <article class="document-card">
-            <div class="document-main">
-              <div class="document-icon">
-                <FileText size={23} strokeWidth={1.8} />
-              </div>
-
-              <div>
-                <h3>Najważniejsze pisma i odpowiedzi instytucji</h3>
-                <p>Zbiór dokumentów</p>
-              </div>
-            </div>
-
-            <a
-              href="/dokumenty"
-              class="download-button"
-              aria-label="Zobacz wszystkie dokumenty"
-            >
-              <ArrowRight size={19} />
-            </a>
-          </article>
-
+                <a
+                  href={document.href}
+                  class="download-button"
+                  aria-label={`Pobierz: ${document.title}`}
+                  download
+                >
+                  <Download size={19} />
+                </a>
+              </article>
+            ))
+          }
         </div>
+
 
         <a href="/dokumenty" class="all-documents">
           Zobacz wszystkie dokumenty

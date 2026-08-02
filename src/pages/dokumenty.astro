@@ -1,41 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { FileText, Download, ExternalLink } from "lucide-astro";
+import {
+  FileText,
+  Download,
+  ExternalLink
+} from "lucide-astro";
 
-const documents = [
-  {
-    title: "Pismo lekarzy z 30 czerwca 2026 r.",
-    description:
-      "Pismo lekarzy dotyczące organizacji leczenia dzieci onkologicznych oraz zmian związanych z przeniesieniem świadczeń z Górnośląskiego Centrum Zdrowia Dziecka w Katowicach.",
-    type: "PDF",
-    date: "30 czerwca 2026",
-    href: "/documents/01-pismo-lekarzy-30-06-2026.pdf"
-  },
-  {
-    title: "Interwencja parlamentarzystów z 17 lipca 2026 r.",
-    description:
-      "Dokument dotyczący interwencji posłów i senatorów w sprawie funkcjonowania dziecięcej onkologii i hematologii na Górnym Śląsku.",
-    type: "PDF",
-    date: "17 lipca 2026",
-    href: "/documents/02-interwencja-parlamentarzystow-17-07-2026.pdf"
-  },
-  {
-    title: "Oświadczenie lekarzy z 9 lipca 2026 r.",
-    description:
-      "Oświadczenie lekarzy odnoszące się do bezpieczeństwa leczenia, zaplecza specjalistycznego oraz organizacji opieki nad dziećmi.",
-    type: "PDF",
-    date: "9 lipca 2026",
-    href: "/documents/03-oswiadczenie-lekarzy-09-07-2026.pdf"
-  },
-  {
-    title: "Petycja z 25 lipca 2026 r.",
-    description:
-      "Petycja o przywrócenie w Górnośląskim Centrum Zdrowia Dziecka w Katowicach leczenia dzieci z guzami mózgu i innymi guzami litymi.",
-    type: "PDF",
-    date: "25 lipca 2026",
-    href: "/documents/04-petycja-25-07-2026.pdf"
-  }
-];
+import { documents } from "../data/documents.js";
 ---
 
 <BaseLayout title="Dokumenty | Bezpieczna Onkologia Dziecięca">
