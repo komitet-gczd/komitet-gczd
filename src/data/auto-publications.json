@@ -6,7 +6,7 @@
     "automatic": true,
     "date": "27 lipca 2026",
     "dateISO": "2026-07-27",
-    "source": "rmf24.plWięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
+    "source": "RMF24WięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Petycja ws. przywrócenia onkologii dziecięcej w Katowicach",
@@ -46,6 +46,22 @@
     "href": "https://katowice.tvp.pl/94485731/onkologia-dziecieca-w-zabrzu-ministerstwo-zdrowia-monitoruje-sytuacje-po-odejsciu-lekarzy",
     "image": "https://s9.tvp.pl/images2/9/a/8/uid_9a8a96689b8041ff926d6969fe131cdb_width_900_play_0_pos_0_gs_0_height_506.png",
     "relevanceScore": 5
+  },
+  {
+    "id": "auto-338a719c5c5976f1",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "23 lipca 2026",
+    "dateISO": "2026-07-23",
+    "source": "Gazeta PrawnaWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Afera wokół likwidacji oddziału dziecięcej onkologii w Katowicach. Resort zdrowia zabrał głos",
+    "description": "Głośnym echem odbiła się decyzja Śląskiego Uniwersytetu Medycznego o likwidacji oddziału onkologii i hematologii dziecięcej w Katowicach i przeniesienia małych pacjentów do Zabrza. W sprawie przywrócenia oddziału apelowali rodzice, lekarze i fundacje zajmujące się pomaganiem dzieciom chorym na raka. Teraz do sprawy odniósł się resort z...",
+    "href": "https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/11279415,afera-wokol-likwidacji-oddzialu-dzieciecej-onkologii-w-katowicach-res.html",
+    "image": "https://webp-konwerter.incdn.pl/eyJmIjoiaHR0cHM6Ly9pbmZvci13ZWItc3RhdGljLm/luY2RuLnBsL2RncHN0YXRpYy9kb2N1bWVudHMvRk9C/MDAwMDAwMDAwMDAwNzYxMzQwNi9maWxlcy9zenBpdG/FsLWxla2Fyei0zOTE4MjgyNi5wbmciLCJ3IjozODQwfQ",
+    "relevanceScore": 7
   },
   {
     "id": "auto-9d8f36aebfa0c333",
@@ -189,6 +205,22 @@
     "description": "1 lipca ruszyło Śląskie Centrum Onkologii i Hematologii Dziecięcej w Zabrzu. Tego samego dnia sześcioosobowy zespół lekarzy z Katowic, który miał pracować w nowym ośrodku, rozwiązał umowy, na przyczyny wskazując m.in. na zakres leczenia i organizację pracy.",
     "href": "https://www.rynekzdrowia.pl/Serwis-Onkologia/Nagle-wszyscy-lekarze-odeszli-W-dzien-otwarcia-centrum-onkologii-dla-dzieci,286305,1013.html",
     "image": "https://pliki.rynekzdrowia.pl/i/24/46/95/244695_r2_940.jpg",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-dc49ba80627cbd3b",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "4 lipca 2026",
+    "dateISO": "2026-07-04",
+    "source": "Śląskie Radio ESKAWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Zabrze: Bunt lekarzy z centrum onkologii dziecięcej. Odchodzą z pracy",
+    "description": "1 lipca w Zabrzu uroczyście otwarto Śląskie Centrum Onkologii i Hematologii Dziecięcej, placówkę, która miała stać się ostoją w walce z najgroźniejszymi choroba...",
+    "href": "https://slaskie.eska.pl/bunt-lekarzy-z-centrum-onkologii-dzieciecej-odchodza-z-pracy-aa-GNet-Fe4P-dxQq.html",
+    "image": "https://cdn.galleries.smcloud.net/t/galleries/gf-uspw-yQf4-Lqk5_lekarz-doktor-1920x1080-nocrop.jpg",
     "relevanceScore": 7
   },
   {
