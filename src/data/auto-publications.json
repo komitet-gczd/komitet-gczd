@@ -1,5 +1,21 @@
 [
   {
+    "id": "auto-84c687668cf295d9",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "6 sierpnia 2026",
+    "dateISO": "2026-08-06",
+    "source": "TVP KatowiceWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "\"Bezpieczeństwo i ciągłość leczenia są najważniejsze\". Śląskie Centrum Onkologii i Hematologii Dziecięcej o leczeniu swoich pacjentów",
+    "description": "1 lipca rozpoczęło działalność Śląskie Centrum Onkologii i Hematologii Dziecięcej w Zabrzu. Powstało z połączenia oddziałów szpitali z Katowic i Zabrza....",
+    "href": "https://katowice.tvp.pl/94720562/slaskie-centrum-onkologii-i-hematologii-dzieciecej-w-zabrzu-o-leczeniu-swoich-pacjentow",
+    "image": "https://s3.tvp.pl/images2/3/4/d/uid_34d4a2b2bc404fa1adddb9f49b29faba_width_900_play_0_pos_0_gs_0_height_506.jfif",
+    "relevanceScore": 9
+  },
+  {
     "id": "auto-7726489bed94e2ae",
     "category": "media",
     "featured": false,
@@ -70,7 +86,7 @@
     "automatic": true,
     "date": "22 lipca 2026",
     "dateISO": "2026-07-22",
-    "source": "Puls MedycynyWięcej",
+    "source": "pulsmedycyny.plWięcej",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Kryzys w śląskiej onkologii dziecięcej. Dr hab. Mizia-Malarz: mogę leczyć od jutra, ale w GCZD",
