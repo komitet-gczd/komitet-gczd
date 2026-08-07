@@ -154,7 +154,7 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Lekarki chcą przywrócenia onkologii dziecięcej. \"Chodzi wyłącznie o zdrowie i życie dzieci\"",
-    "description": "Lekarki, które pracowały na zamkniętym w czerwcu oddziale Hematologii i Onkologii Dziecięcej w Katowicach, chcą przywrócenia oddziału. \"Chodzi wyłącznie o zdrowie i życie dzieci\" - piszą. Była ordynator twierdzi, że leczenie dzieci w Zabrzu mogłoby wręcz zagrażać ich zdrowiu, a nawet życiu. Zarząd Polskiego Towarzystwa Onkologii i Hema...",
+    "description": "TVN24WięcejLekarki chcą przywrócenia onkologii dziecięcej. \"Chodzi wyłącznie o zdrowie i życie dzieci\"10 lip",
     "href": "https://tvn24.pl/katowice/katowice-zabrze-lekarki-chca-przywrocenia-onkologii-chodzi-wylacznie-o-zdrowie-i-zycie-dzieci-st9136453",
     "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-svvxos-gornoslaskie-centrum-zdrowia-dziecka-ph6900821/alternates/WEBP_LANDSCAPE_1620",
     "relevanceScore": 7
@@ -202,7 +202,7 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Problemy po połączeniu oddziałów onkologii dziecięcej. List szpitala do rodziców",
-    "description": "Szpital w Zabrzu poinformował, że nie jest w stanie na razie zająć wszystkimi małymi pacjentami, którzy byli leczeni dotąd na onkologii w Katowicach. W oświadczeniu wskazano, że obecnie nie ma specjalisty, który miałby odpowiednie doświadczenie. Rodzice dzieci z guzami mózgu prawdopodobnie będą jeździć do Krakowa lub do Warszawy.",
+    "description": "TVN24WięcejProblemy po połączeniu oddziałów onkologii dziecięcej. List szpitala do rodziców6 lip",
     "href": "https://tvn24.pl/katowice/onkologia-dziecieca-w-zabrzu-nie-bedzie-leczyc-czesci-pacjentow-zostanie-wskazany-osrodek-st9130483",
     "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-2837786-szpital-w-zabrzu-ph9130910/alternates/WEBP_LANDSCAPE_1620",
     "relevanceScore": 7
@@ -256,6 +256,22 @@
     "relevanceScore": 7
   },
   {
+    "id": "auto-7f916ed305bda7de",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "3 lipca 2026",
+    "dateISO": "2026-07-03",
+    "source": "TVN24Więcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Po połączeniu oddziałów onkologicznych lekarze zrezygnowali z pracy. Szpital o \"hipokryzji\"",
+    "description": "TVN24WięcejPo połączeniu oddziałów onkologicznych lekarze zrezygnowali z pracy. Szpital o \"hipokryzji\"3 lip",
+    "href": "https://tvn24.pl/katowice/po-polaczeniu-oddzialow-onkologicznych-lekarze-zrezygnowali-z-pracy-szpital-o-hipokryzji-st9125114",
+    "image": null,
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-3edac18894b5987a",
     "category": "media",
     "featured": false,
@@ -285,6 +301,22 @@
     "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
     "href": "https://dziennikzachodni.pl/dramatyczna-sytuacja-dzieciecej-onkologii-na-slasku-lekarze-rezygnuja-z-pracy-rodzice-sa-przerazeni-nikt-nic-nie-wie/ar/c1p2-29146631",
     "image": "https://d-pa.ppstatic.pl/frames/pa-def/c8/68/il20260702_970951799_original.jpg",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-2769a9af7acd1363",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "2 lipca 2026",
+    "dateISO": "2026-07-02",
+    "source": "Katowice Nasze MiastoWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Lekarze rezygnują, rodzice przerażeni! Dramatyczna sytuacja dziecięcej onkologii na Śląsku. \"Rozwiązania niebezpieczne dla ochrony zdrowia\"",
+    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
+    "href": "https://katowice.naszemiasto.pl/lekarze-rezygnuja-rodzice-przerazeni-dramatyczna-sytuacja-dzieciecej-onkologii-na-slasku-rozwiazania-niebezpieczne-dla-ochrony-zdrowia/ar/c1p2-29147329",
+    "image": "https://d-pa.ppstatic.pl/frames/pa-def/c8/68/il20260702_970951789_original.jpg",
     "relevanceScore": 7
   }
 ]
