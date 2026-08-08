@@ -54,7 +54,7 @@
     "automatic": true,
     "date": "27 lipca 2026",
     "dateISO": "2026-07-27",
-    "source": "RMF24WięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
+    "source": "rmf24.plWięcejPetycja ws. przywrócenia onkologii dziecięcej w Katowicach",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Petycja ws. przywrócenia onkologii dziecięcej w Katowicach",
@@ -282,9 +282,9 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Po połączeniu oddziałów onkologicznych lekarze zrezygnowali z pracy. Szpital o \"hipokryzji\"",
-    "description": "TVN24WięcejPo połączeniu oddziałów onkologicznych lekarze zrezygnowali z pracy. Szpital o \"hipokryzji\"3 lip",
+    "description": "Lekarze, którzy pracowali na onkologii dziecięcej w Górnośląskim Centrum Zdrowia Dziecka w Katowicach, dzień przed połączeniem z placówką w Zabrzu zrezygnowali z pracy. Krytykują szpital między innymi za brak odpowiednich warunków leczenia dzieci z guzami mózgu. Dyrektor placówki w Zabrzu zarzuca lekarzom hipokryzję.",
     "href": "https://tvn24.pl/katowice/po-polaczeniu-oddzialow-onkologicznych-lekarze-zrezygnowali-z-pracy-szpital-o-hipokryzji-st9125114",
-    "image": null,
+    "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-2109424-onkologia-dziecieca-ph8307959/alternates/WEBP_LANDSCAPE_1620",
     "relevanceScore": 7
   },
   {
@@ -314,7 +314,7 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Dramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni",
-    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
+    "description": "Dziennik ZachodniWięcejDramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni2 lip",
     "href": "https://dziennikzachodni.pl/dramatyczna-sytuacja-dzieciecej-onkologii-na-slasku-lekarze-rezygnuja-z-pracy-rodzice-sa-przerazeni-nikt-nic-nie-wie/ar/c1p2-29146631",
     "image": "https://d-pa.ppstatic.pl/frames/pa-def/c8/68/il20260702_970951799_original.jpg",
     "relevanceScore": 7
