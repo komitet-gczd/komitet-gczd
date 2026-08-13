@@ -1,5 +1,21 @@
 [
   {
+    "id": "auto-215050d3d174576d",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "13 sierpnia 2026",
+    "dateISO": "2026-08-13",
+    "source": "zabrze.com.plWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Spór wokół onkologii dziecięcej w Zabrzu. Rodzice protestują, sprawę nagłaśniają politycy",
+    "description": "Od 1 lipca 2026 roku działa nowe Śląskie Centrum Onkologii i Hematologii Dziecięcej, które powstało w wyniku połączenia oddziałów z Zabrza i Katowic. Część rodziców, których dzieci były dotychczas leczone w Górnośląskim Centrum Zdrowia Dziecka, wyraża obawy o standardy opieki w nowej siedzibie w Zabrzu. Niektórzy głośno protestują, a d...",
+    "href": "https://zabrze.com.pl/artykuly/artykul/spor-wokol-onkologii-dzieciecej-w-zabrzu-rodzice-protestuja-sprawe-naglasniaja-politycy",
+    "image": "https://cdn.silesia.info.pl/public-media/2026/08/752497717_1443038510963572_4686942581014559577_n.webp",
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-03693a97bec6de85",
     "category": "media",
     "featured": false,
@@ -198,7 +214,7 @@
     "automatic": true,
     "date": "6 lipca 2026",
     "dateISO": "2026-07-06",
-    "source": "RzeczpospolitaWięcej",
+    "source": "rp.plWięcej",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "W Zabrzu otwarto nowe centrum onkologii dziecięcej. Tego samego dnia odeszli lekarze",
