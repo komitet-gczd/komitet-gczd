@@ -1,5 +1,21 @@
 [
   {
+    "id": "auto-feb28fabf0f3feb8",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "13 sierpnia 2026",
+    "dateISO": "2026-08-13",
+    "source": "TVP KatowiceWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "„Spełnił się czarny scenariusz. Niebezpieczne zdarzenie na onkologii dziecięcej - rodzice alarmują",
+    "description": "„Spełnił się czarny scenariusz, przed którym ostrzegaliśmy\" - alarmują rodzice przeciwni przeniesieniu oddziału onkologii i hematologii...",
+    "href": "https://katowice.tvp.pl/94842888/spelnil-sie-czarny-scenariusz-rodzice-alarmuja-po-zdarzeniu-w-zabrzu-szpital-odpowiada",
+    "image": "https://s3.tvp.pl/images2/3/7/b/uid_37bee807c76e40dca550174c4617de4f_width_900_play_0_pos_0_gs_0_height_506.jpg",
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-e1997baa0e917287",
     "category": "media",
     "featured": false,
