@@ -23,6 +23,10 @@ import {
   publicationStats
 } from "../data/publications.js";
 
+const sortedMediaPublications = [...mediaPublications].sort(
+  (a, b) => b.dateISO.localeCompare(a.dateISO)
+);
+
 const stats = [
   {
     value: publicationStats.media,
@@ -198,8 +202,9 @@ function getPlatformIcon(platform) {
           </p>
         </div>
 
+
         <div class="publications-grid">
-          {mediaPublications.map((publication) => {
+          {sortedMediaPublications.map((publication) => {
             const PlatformIcon = getPlatformIcon(publication.platform);
 
             return (
