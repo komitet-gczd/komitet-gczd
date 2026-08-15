@@ -80,6 +80,22 @@
     "relevanceScore": 8
   },
   {
+    "id": "auto-e1935e399326b94a",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "18 lipca 2026",
+    "dateISO": "2026-07-18",
+    "source": "Gazeta PrawnaWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Apel ws. Oddziału Onkologii i Hematologii dziecięcej w GCZD. Wpłynęło zawiadomienie do prokuratury",
+    "description": "To był prawdziwy cios dla małych pacjentów chorych na raka i ich rodziców. Niestety, mimo protestów i licznych apeli, decyzje zapadły i oddział onkologii i hematologii dziecięcej Górnośląskiego Centrum Zdrowia Dziecka przestał istnieć na początku lipca. Pacjenci zostali przeniesieni do Zabrza, ale rodzice mają całą listę zarzutów ws. f...",
+    "href": "https://www.gazetaprawna.pl/biznes/zdrowie/artykuly/11277627,dramat-malych-pacjentow-chorych-na-raka-zrozpaczeni-rodzice-zawiadami.html",
+    "image": "https://webp-konwerter.incdn.pl/eyJmIjoiaHR0cHM6Ly9pbmZvci13ZWItc3RhdGljLmluY2/RuLnBsL2RncHN0YXRpYy9kb2N1bWVudHMvRk9CMDAwMDAw/MDAwMDAwNzYyNTc3Ni9maWxlcy9wYXAtMjAyNDAyMjYtMG/5nLTM5MjAxOTA1LTM5MjAxOTEwLmpwZyIsInciOjM4NDB9",
+    "relevanceScore": 11
+  },
+  {
     "id": "auto-78ebb5cd202c52bb",
     "category": "media",
     "featured": false,
@@ -170,9 +186,9 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Dramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni",
-    "description": "Dziennik ZachodniWięcejDramatyczna sytuacja dziecięcej onkologii na Ślasku Lekarze rezygnują, rodzice przerażeni2 lip",
+    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
     "href": "https://dziennikzachodni.pl/dramatyczna-sytuacja-dzieciecej-onkologii-na-slasku-lekarze-rezygnuja-z-pracy-rodzice-sa-przerazeni-nikt-nic-nie-wie/ar/c1p2-29146631",
-    "image": null,
+    "image": "https://d-pa.ppstatic.pl/frames/pa-def/c8/68/il20260702_970951799_original.jpg",
     "relevanceScore": 7
   },
   {
