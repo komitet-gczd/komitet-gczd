@@ -176,6 +176,22 @@
     "relevanceScore": 7
   },
   {
+    "id": "auto-a45bf2dfafbb83cb",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "5 lipca 2026",
+    "dateISO": "2026-07-05",
+    "source": "Rynek ZdrowiaWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Nagle wszyscy lekarze odeszli. W dzień otwarcia centrum onkologii dla dzieci",
+    "description": "1 lipca ruszyło Śląskie Centrum Onkologii i Hematologii Dziecięcej w Zabrzu. Tego samego dnia sześcioosobowy zespół lekarzy z Katowic, który miał pracować w nowym ośrodku, rozwiązał umowy, na przyczyny wskazując m.in. na zakres leczenia i organizację pracy.",
+    "href": "https://www.rynekzdrowia.pl/Serwis-Onkologia/Nagle-wszyscy-lekarze-odeszli-W-dzien-otwarcia-centrum-onkologii-dla-dzieci,286305,1013.html",
+    "image": "https://pliki.rynekzdrowia.pl/i/24/46/95/244695_r2_940.jpg",
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-7f916ed305bda7de",
     "category": "media",
     "featured": false,
