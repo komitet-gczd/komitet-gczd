@@ -134,7 +134,7 @@
     "automatic": true,
     "date": "17 lipca 2026",
     "dateISO": "2026-07-17",
-    "source": "katowice.tvp.plWięcej",
+    "source": "TVP KatowiceWięcej",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Lista zarzutów rodziców coraz dłuższa. Śledczy zajmą się przeniesionym oddziałem onkologii?",
@@ -189,6 +189,22 @@
     "description": "Otwarcie 1 lipca Śląskiego Centrum Onkologii i Hematologii Dziecięcej w Zabrzu miało być początkiem nowego etapu w leczeniu najmłodszych pacjentów z chorobami n",
     "href": "https://www.rp.pl/ochrona-zdrowia/art44776041-kryzys-w-slaskim-centrum-onkologii-dzieciecej-w-dniu-otwarcia-odeszli-lekarze",
     "image": "https://i.gremicdn.pl/image/free/809284a3f56e82ed4ab34de31263c33c/?t=crop:4644:2880:nowe:238:0,resize:fill:2000:1250&ctx=preview",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-309cf0746e64b546",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "6 lipca 2026",
+    "dateISO": "2026-07-06",
+    "source": "PolitykaZdrowotna.comWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Kryzys w Śląskim Centrum Onkologii Dziecięcej w Zabrzu. Sześcioosobowy zespół lekarzy złożył wypowiedzenia",
+    "description": "W Śląskim Centrum Onkologii i Hematologii Dziecięcej w Zabrzu już w dniu otwarcia doszło do poważnego kryzysu kadrowego. Sześcioosobowy zespół lekarzy",
+    "href": "https://politykazdrowotna.com/artykul/kryzys-w-slaskim-centrum-n2400409",
+    "image": "https://politykazdrowotna.com/static/files/gallery/541/2400409_1783327265.webp",
     "relevanceScore": 7
   },
   {
