@@ -160,6 +160,22 @@
     "relevanceScore": 7
   },
   {
+    "id": "auto-9e5792c058d8c4ab",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "10 lipca 2026",
+    "dateISO": "2026-07-10",
+    "source": "Puls MedycynyWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Kryzys w śląskiej onkologii dziecięcej. Szef PTOHD z apelem o podjęcie pilnych działań naprawczych. Uczelnia milczy",
+    "description": "Przewodniczący Polskiego Towarzystwa Onkologii i Hematologii Dziecięcej prof. Wojciech Młynarski zwrócił się z apelem o podjęcie pilnych działań naprawczych, związanych z kryzysem opieki medycznej nad dziećmi z chorobami nowotworowymi z województwa śląskiego. Śląski Uniwersytet Medyczny w Katowicach nie zajął dotąd w tej sprawie oficja...",
+    "href": "https://pulsmedycyny.pl/system-ochrony-zdrowia/szpitale/kryzys-w-slaskiej-onkologii-dzieciecej-szef-ptohd-z-apelem-o-podjecie-pilnych-dzialan-naprawczych-uczelnia-milczy/",
+    "image": "https://images.ctfassets.net/84ticw3z0miz/3QlryZrM8SWlbZNCWkhJIm/9f2ae989a356de76e851a234a98657b2/prof._Wojciech_MÃ__ynarski.jpg",
+    "relevanceScore": 7
+  },
+  {
     "id": "auto-17d0106942e7eb86",
     "category": "media",
     "featured": false,
