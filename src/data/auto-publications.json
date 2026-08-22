@@ -96,6 +96,22 @@
     "relevanceScore": 7
   },
   {
+    "id": "auto-0c476292431af076",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "23 lipca 2026",
+    "dateISO": "2026-07-23",
+    "source": "TVP KatowiceWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Kontrowersje wokół nowego centrum onkologii dziecięcej. Ministerstwo Zdrowia oczekuje działań",
+    "description": "Ministerstwo Zdrowia monitoruje sytuację po przeniesieniu onkologii dziecięcej do Zabrza i pozostaje w kontakcie z władzami uczelni oraz szpitala - powiedziała...",
+    "href": "https://katowice.tvp.pl/94485731/onkologia-dziecieca-w-zabrzu-ministerstwo-zdrowia-monitoruje-sytuacje-po-odejsciu-lekarzy",
+    "image": "https://s9.tvp.pl/images2/9/a/8/uid_9a8a96689b8041ff926d6969fe131cdb_width_900_play_0_pos_0_gs_0_height_506.png",
+    "relevanceScore": 5
+  },
+  {
     "id": "auto-9d8f36aebfa0c333",
     "category": "media",
     "featured": false,
