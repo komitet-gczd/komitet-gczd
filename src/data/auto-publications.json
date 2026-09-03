@@ -38,7 +38,7 @@
     "automatic": true,
     "date": "1 września 2026",
     "dateISO": "2026-09-01",
-    "source": "naszemiasto.plWięcej",
+    "source": "Zabrze Nasze MiastoWięcej",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Część onkologii dziecięcej wraca z Zabrza do Katowic. Górnośląskim Centrum Zdrowia Dziecka szykuje nowy oddział, 24-łóżkowy oddział",
@@ -58,9 +58,9 @@
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Część onkologii dziecięcej wróci jednak z Zabrza do Katowic. Górnośląskim Centrum Zdrowia Dziecka szykuje nowy oddział",
-    "description": "Dziennik ZachodniWięcejCzęść onkologii dziecięcej wróci jednak z Zabrza do Katowic. Górnośląskim Centrum Zdrowia Dziecka szykuje nowy oddziałWczoraj",
+    "description": "Publikacja dotycząca bezpieczeństwa dziecięcej onkologii na Śląsku.",
     "href": "https://dziennikzachodni.pl/czesc-onkologii-dzieciecej-wroci-jednak-z-zabrza-do-katowic-gornoslaskim-centrum-zdrowia-dziecka-szykuje-nowy-oddzial/ar/c1p2-29313067",
-    "image": null,
+    "image": "https://d-pa.ppstatic.pl/frames/pa-def/c3/20/26090112ad_975230889_original.jpg",
     "relevanceScore": 7
   },
   {
@@ -365,6 +365,22 @@
     "description": "Lekarze, którzy pracowali na onkologii dziecięcej w Górnośląskim Centrum Zdrowia Dziecka w Katowicach, dzień przed połączeniem z placówką w Zabrzu zrezygnowali z pracy. Krytykują szpital między innymi za brak odpowiednich warunków leczenia dzieci z guzami mózgu. Dyrektor placówki w Zabrzu zarzuca lekarzom hipokryzję.",
     "href": "https://tvn24.pl/katowice/po-polaczeniu-oddzialow-onkologicznych-lekarze-zrezygnowali-z-pracy-szpital-o-hipokryzji-st9125114",
     "image": "https://tvn24.pl/_e/i/najnowsze/cdn-zdjecie-2109424-onkologia-dziecieca-ph8307959/alternates/WEBP_LANDSCAPE_1620",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-93600aa500fa97ca",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "3 lipca 2026",
+    "dateISO": "2026-07-03",
+    "source": "Tysol.plWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Alarm w śląskiej onkologii dziecięcej. Lekarze odchodzą, rodzice przerażeni",
+    "description": "Po uruchomieniu Śląskiego Centrum Onkologii i Hematologii Dziecięcej część lekarzy z Katowic zrezygnowała z pracy, a rodzice pacjentów alarmują o problemach z organizacją leczenia. Dyrekcja zapewnia, że terapia przebiega bez zakłóceń. Sprawdzamy, skąd biorą się obawy i jakie stanowiska przedstawiają obie strony.",
+    "href": "https://tysol.pl/wiadomosci/alarm-w-slaskiej-onkologii-dzieciecej-lekarze-odchodza-rodzice-przerazeni,183976",
+    "image": "https://tysol.pl/storage/files/2026/7/3/74201ff2-d6a6-4794-9e90-0aba14ca2324/dziewczynka%20szpital%20grok.webp",
     "relevanceScore": 7
   },
   {
