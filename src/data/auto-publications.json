@@ -278,7 +278,7 @@
     "automatic": true,
     "date": "6 lipca 2026",
     "dateISO": "2026-07-06",
-    "source": "tvn24.plWięcej",
+    "source": "TVN24Więcej",
     "platform": "Portal",
     "type": "Artykuł",
     "title": "Problemy po połączeniu oddziałów onkologii dziecięcej. List szpitala do rodziców",
@@ -349,6 +349,22 @@
     "description": "1 lipca w Zabrzu uroczyście otwarto Śląskie Centrum Onkologii i Hematologii Dziecięcej, placówkę, która miała stać się ostoją w walce z najgroźniejszymi choroba...",
     "href": "https://slaskie.eska.pl/bunt-lekarzy-z-centrum-onkologii-dzieciecej-odchodza-z-pracy-aa-GNet-Fe4P-dxQq.html",
     "image": "https://cdn.galleries.smcloud.net/t/galleries/gf-uspw-yQf4-Lqk5_lekarz-doktor-1920x1080-nocrop.jpg",
+    "relevanceScore": 7
+  },
+  {
+    "id": "auto-16fa7ceac171858f",
+    "category": "media",
+    "featured": false,
+    "automatic": true,
+    "date": "4 lipca 2026",
+    "dateISO": "2026-07-04",
+    "source": "Portal SamorządowyWięcej",
+    "platform": "Portal",
+    "type": "Artykuł",
+    "title": "Lekarze zrezygnowali. Nowo utworzone centrum onkologii dziecięcej bez obsady",
+    "description": "Śląskie Centrum Onkologii i Hematologii Dziecięcej w Zabrzu nie ma pełnego składu lekarzy. W dniu rozpoczęcia działalności sześcioosobowy zespół lekarzy z Katowic, który miał kontynuować pracę w nowym ośrodku, rozwiązał umowy o pracę. Jednym z zastrzeżeń lekarzy jest zakres leczenia w placówce.",
+    "href": "https://www.portalsamorzadowy.pl/ochrona-zdrowia/lekarze-zrezygnowali-nowo-utworzone-centrum-onkologii-dzieciecej-bez-obsady,667527.html",
+    "image": "https://pliki.portalsamorzadowy.pl/i/29/52/91/295291_r2_940.jpg",
     "relevanceScore": 7
   },
   {
